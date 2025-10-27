@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ElitesDev - Digital Solutions for a Smarter Future">
+<meta name="keywords" content="digital agency, web development, branding, marketing">
+<meta name="author" content="ElitesDev">
+    <title>ElitesDev - Digital Solutions for a Smarter Future</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&display=swap " rel="stylesheet">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollSmoother.min.js "></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@studio-freight/lenis@1/dist/lenis.css">
+</head>
+<body>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <!-- Animated Background -->
+            <div class="bg-container">
+                <div class="grid-bg"></div>
+                <div class="orb orb-1"></div>
+                <div class="orb orb-2"></div>
+                <div class="orb orb-3"></div>
+            </div>
+
+            <!-- New Pill-Style Navigation -->
+            <nav class="main-nav" id="navbar">
+                <div class="logo">
+                    <span class="yellow">ELITES</span><span class="white">DEV</span>
+                </div>
+
+                <div class="nav-pill">
+                    <ul class="nav-menu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li>
+                            <a href="#services">Services</a>
+                            <ul class="dropdown">
+                                <li><a href="#branding">Branding & Identity</a></li>
+                                <li><a href="#marketing">Digital Marketing</a></li>
+                                <li><a href="#content">Content Production</a></li>
+                                <li><a href="#social">Social Media</a></li>
+                                <li><a href="#ecommerce">E-commerce Solutions</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Pages</a>
+                            <ul class="dropdown">
+                                <li><a href="#projects">Projects</a></li>
+                                <li><a href="#testimonials">Testimonials</a></li>
+                                <li><a href="#team">Team</a></li>
+                                <li><a href="#faq">FAQs</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#booking">Book Service</a></li>
+                    </ul>
+
+                    <div class="nav-buttons">
+                        <button class="btn btn-talk" onclick="window.location.href='#booking'">Let's Talk</button>
+                        <button class="btn btn-get" onclick="window.location.href='#booking'">Get Started</button>
+                    </div>
+                </div>
+
+                <div class="menu-btn" id="menuBtn">
+                    <span></span>
+                    <span></span>
+                    <div class="menu-dropdown" id="menuDropdown">
+                        <a href="#home">Home</a>
+                        <a href="#about">About Us</a>
+                        <a href="#services">Services</a>
+                        <a href="#team">Team</a>
+                        <a href="#testimonials">Testimonials</a>
+                        <a href="#booking">Book Service</a>
+                    </div>
+                </div>
+            </nav>
+
+   
+</head>
+<body>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <!-- Animated floating shapes -->
+        <div class="hero-shape hero-shape-1"></div>
+        <div class="hero-shape hero-shape-2"></div>
+        <div class="hero-shape hero-shape-3"></div>
+        
+        <!-- Background image overlay -->
+        <div class="hero-bg-image"></div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <!-- Animated badge -->
+                <div class="hero-badge">
+                    <span class="badge-icon">🚀</span>
+                    <span class="badge-text">Trusted by 250+ Brands Worldwide</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="title-line"><span class="title-text text-white">Transform Your Vision</span></span>
+                    <span class="title-line"><span class="title-text gradient-text">Into Digital Reality</span></span>
+                </h1>
+                
+                <p class="hero-desc">We craft stunning digital experiences that captivate audiences, drive engagement, and accelerate business growth through innovative design and strategic execution.</p>
+                
+                <div class="hero-cta">
+                    <a href="#booking" class="cta-btn cta-primary">
+                        <span>Start Your Journey</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#services" class="cta-btn cta-secondary">
+                        <span>Explore Services</span>
+                    </a>
+                </div>
+                
+                <!-- Stats row -->
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="stat-value">250+</div>
+                        <div class="stat-label">Projects Delivered</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="stat-value">98%</div>
+                        <div class="stat-label">Client Satisfaction</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="stat-value">5 Years</div>
+                        <div class="stat-label">Industry Experience</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Visual elements grid -->
+            <div class="hero-visual">
+                <div class="visual-card visual-card-1">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" alt="Team collaboration">
+                    <div class="card-overlay">
+                        <span class="card-tag">Strategy</span>
+                    </div>
+                </div>
+                <div class="visual-card visual-card-2">
+                    <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&q=80" alt="Creative design">
+                    <div class="card-overlay">
+                        <span class="card-tag">Design</span>
+                    </div>
+                </div>
+                <div class="visual-card visual-card-3">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Analytics">
+                    <div class="card-overlay">
+                        <span class="card-tag">Growth</span>
+                    </div>
+                </div>
+                
+                <!-- Floating accent elements -->
+                <div class="floating-element floating-1">
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                        <circle cx="30" cy="30" r="28" stroke="url(#grad1)" stroke-width="4"/>
+                        <defs>
+                            <linearGradient id="grad1" x1="0" y1="0" x2="60" y2="60">
+                                <stop offset="0%" stop-color="#FFD700"/>
+                                <stop offset="100%" stop-color="#FFA500"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="floating-element floating-2">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <rect x="2" y="2" width="36" height="36" rx="8" stroke="#00D4FF" stroke-width="3"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+           <!-- =====  NEW ABOUT – ONE-WINDOW  ===== -->
+<!-- REVOLUTIONARY ABOUT SECTION -->
+<section id="about" class="about-revolution">
+    <!-- Animated background -->
+    <div class="about-bg-container">
+        <div class="about-grid-pattern"></div>
+        <div class="about-orb about-orb-1"></div>
+        <div class="about-orb about-orb-2"></div>
+        <div class="about-orb about-orb-3"></div>
+    </div>
+    
+    <!-- Parallax Image Layers -->
+    <div class="parallax-layers">
+        <div class="parallax-layer layer-1"></div>
+        <div class="parallax-layer layer-2"></div>
+        <div class="parallax-layer layer-3"></div>
+    </div>
+    
+    <div class="about-content-wrapper">
+        <!-- Hero Section -->
+        <div class="about-hero-section">
+            <div class="about-badge-float">
+                <span class="pulse-dot"></span>
+                <span>Who We Are</span>
+                <span class="badge-arrow">→</span>
+            </div>
+            
+            <h2 class="about-hero-title">
+                <span class="title-line" data-aos="slide-up" data-aos-delay="0">We Don't Just Build</span>
+                <span class="title-line" data-aos="slide-up" data-aos-delay="100">
+                    <span class="gradient-text-gold">Websites</span>
+                </span>
+                <span class="title-line" data-aos="slide-up" data-aos-delay="200">We Create Digital</span>
+                <span class="title-line" data-aos="slide-up" data-aos-delay="300">
+                    <span class="gradient-text-blue">Masterpieces</span>
+                </span>
+            </h2>
+            
+            <p class="about-hero-desc" data-aos="fade-up" data-aos-delay="400">
+                For over 5 years, we've been transforming ambitious visions into extraordinary digital experiences 
+                that captivate, convert, and dominate markets.
+            </p>
+        </div>
+        
+        <!-- Horizontal Scrolling Images Banner -->
+        <div class="about-scroll-banners">
+            <div class="scroll-banner scroll-left">
+                <div class="banner-track">
+                    <div class="banner-item">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Team">
+                        <div class="banner-overlay">
+                            <span class="banner-tag">🤝 Collaboration</span>
+                        </div>
+                    </div>
+                    <div class="banner-item">
+                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80" alt="Strategy">
+                        <div class="banner-overlay">
+                            <span class="banner-tag">🎯 Strategy</span>
+                        </div>
+                    </div>
+                    <div class="banner-item">
+                        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&q=80" alt="Design">
+                        <div class="banner-overlay">
+                            <span class="banner-tag">🎨 Design</span>
+                        </div>
+                    </div>
+                    <div class="banner-item">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="Innovation">
+                        <div class="banner-overlay">
+                            <span class="banner-tag">💡 Innovation</span>
+                        </div>
+                    </div>
+                    <div class="banner-item">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" alt="Excellence">
+                        <div class="banner-overlay">
+                            <span class="banner-tag">⭐ Excellence</span>
+                        </div>
+                    </div>
+                    <!-- Duplicate for infinite scroll -->
+                    <div class="banner-item">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Team">
+                        <div class="banner-overlay">
+                            <span class="banner-tag">🤝 Collaboration</span>
+                        </div>
+                    </div>
+                    <div class="banner-item">
+                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80" alt="Strategy">
+                        <div class="banner-overlay">
+                            <span class="banner-tag">🎯 Strategy</span>
+                        </div>
+                    </div>
+                    <div class="banner-item">
+                        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&q=80" alt="Design">
+                        <div class="banner-overlay">
+                            <span class="banner-tag">🎨 Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-banner scroll-right">
+                <div class="banner-track">
+                    <div class="banner-item">
+                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=80" alt="Growth">
+                        <div class="banner-overlay">
+                            <span class="banner-tag">📈 Growth</span>
+                        </div>
+                    </div>
+                    <div class="banner-item">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Analytics">
+                        <div class="banner-overlay">
+                            <span class="banner-tag">📊 Analytics</span>
+                        </div>
+                    </div>
+                    <div class="banner-item">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="Technology">
+                        <div class="banner-overlay">
+                            <span class="banner-tag">💻 Technology</span>
+                        </div>
+                    </div>
+                    <div class="banner-item">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80" alt="Success">
+                        <div class="banner-overlay">
+                            <span class="banner-tag">🚀 Success</span>
+                        </div>
+                    </div>
+                    <div class="banner-item">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" alt="Creativity">
+                        <div class="banner-overlay">
+                            <span class="banner-tag">✨ Creativity</span>
+                        </div>
+                    </div>
+                    <!-- Duplicate for infinite scroll -->
+                    <div class="banner-item">
+                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=80" alt="Growth">
+                        <div class="banner-overlay">
+                            <span class="banner-tag">📈 Growth</span>
+                        </div>
+                    </div>
+                    <div class="banner-item">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Analytics">
+                        <div class="banner-overlay">
+                            <span class="banner-tag">📊 Analytics</span>
+                        </div>
+                    </div>
+                    <div class="banner-item">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="Technology">
+                        <div class="banner-overlay">
+                            <span class="banner-tag">💻 Technology</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Interactive Content Grid -->
+        <div class="about-interactive-grid">
+            <!-- Story Card -->
+            <div class="grid-card story-card" data-aos="fade-up">
+                <div class="card-icon">📖</div>
+                <h3 class="card-title">Our Story</h3>
+                <p class="card-text">
+                    Founded in 2019 by a team of passionate designers and developers, 
+                    ElitesDev was born from a simple belief: every brand deserves 
+                    a digital presence that's as unique as their vision.
+                </p>
+                <div class="card-stat">
+                    <span class="stat-number">2019</span>
+                    <span class="stat-label">Est.</span>
+                </div>
+            </div>
+            
+            <!-- Mission Card -->
+            <div class="grid-card mission-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-icon">🎯</div>
+                <h3 class="card-title">Our Mission</h3>
+                <p class="card-text">
+                    To empower businesses with cutting-edge digital solutions that 
+                    don't just meet expectations—they shatter them. We turn bold 
+                    ideas into reality.
+                </p>
+                <div class="card-highlight">
+                    <span class="highlight-text">Excellence Guaranteed</span>
+                </div>
+            </div>
+            
+
+            <!-- Team Culture Card -->
+            <div class="grid-card culture-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="culture-image-stack">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=400&q=80" alt="Team 1" class="culture-img culture-img-1">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=400&q=80" alt="Team 2" class="culture-img culture-img-2">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=400&q=80" alt="Team 3" class="culture-img culture-img-3">
+                </div>
+                <div class="culture-content">
+                    <h3 class="card-title">Our Team</h3>
+                    <p class="card-text">
+                        A diverse collective of designers, developers, strategists, 
+                        and dreamers united by one goal: creating digital magic.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- CTA Card -->
+            <div class="grid-card cta-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="cta-content">
+                    <h3 class="cta-title">Ready to Transform Your Brand?</h3>
+                    <p class="cta-text">Let's create something extraordinary together</p>
+                    <a href="#booking" class="cta-button-about">
+                        <span class="cta-btn-text">Start Your Journey</span>
+                        <span class="cta-btn-icon">→</span>
+                        <div class="cta-btn-shine"></div>
+                    </a>
+                </div>
+                <div class="cta-decoration">
+                    <div class="decoration-circle"></div>
+                    <div class="decoration-circle"></div>
+                    <div class="decoration-circle"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="about-float-elements">
+            <div class="float-shape float-shape-1"></div>
+            <div class="float-shape float-shape-2"></div>
+            <div class="float-shape float-shape-3"></div>
+        </div>
+    </div>
+</section>
+
+
+<<!-- Replace existing ticker HTML with this -->
+<div class="ticker-minimal">
+    <div class="ticker-bar ticker-bar-1">
+        <div class="ticker-content">
+            <span>BRANDING</span>
+            <span>WEB DESIGN</span>
+            <span>DEVELOPMENT</span>
+            <span>MARKETING</span>
+            <span>STRATEGY</span>
+            <span>BRANDING</span>
+            <span>WEB DESIGN</span>
+            <span>DEVELOPMENT</span>
+            <span>MARKETING</span>
+            <span>STRATEGY</span>
+        </div>
+    </div>
+    <div class="ticker-bar ticker-bar-2">
+        <div class="ticker-content">
+            <span>CREATIVE</span>
+            <span>INNOVATIVE</span>
+            <span>STRATEGIC</span>
+            <span>BOLD</span>
+            <span>MODERN</span>
+            <span>CREATIVE</span>
+            <span>INNOVATIVE</span>
+            <span>STRATEGIC</span>
+            <span>BOLD</span>
+            <span>MODERN</span>
+        </div>
+    </div>
+</div>
+
+
+<!-- Horizontal Scroll Services Section -->
+<section id="services" class="services-horizontal">
+    <div class="services-container">
+        <!-- Card 1 -->
+        <div class="service-slide">
+            <div class="service-slide-content">
+                <div class="service-slide-left">
+                    <h2 class="service-slide-title">Branding & Identity</h2>
+                    <div class="service-slide-tags">
+                        <span class="service-tag">Logo Design</span>
+                        <span class="service-tag">Brand Strategy</span>
+                        <span class="service-tag">Visual Identity</span>
+                        <span class="service-tag">Guidelines</span>
+                    </div>
+                    <p class="service-slide-desc">We create visually compelling brand identities that enhance user experience. We make sure your brand's visuals resonate with your audience and stand out in the market.</p>
+                    <a href="#booking" class="service-slide-btn">
+                        <span>Get Started</span>
+                        <span class="btn-arrow">↗</span>
+                    </a>
+                </div>
+                <div class="service-slide-right">
+                    <div class="service-visual">
+                        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=1200&q=80" alt="Branding">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="service-slide">
+            <div class="service-slide-content">
+                <div class="service-slide-left">
+                    <h2 class="service-slide-title">Digital art and graphic design</h2>
+                    <div class="service-slide-tags">
+                        <span class="service-tag">UI/UX</span>
+                        <span class="service-tag">Web design</span>
+                        <span class="service-tag">Packaging</span>
+                        <span class="service-tag">Motion</span>
+                        <span class="service-tag">3D models</span>
+                    </div>
+                    <p class="service-slide-desc">We create visually compelling designs that enhance user experience. We make sure your brand's visuals resonate with your audience.</p>
+                    <a href="#booking" class="service-slide-btn">
+                        <span>Get Started</span>
+                        <span class="btn-arrow">↗</span>
+                    </a>
+                </div>
+                <div class="service-slide-right">
+                    <div class="service-visual">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=1200&q=80" alt="Graphic Design">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="service-slide">
+            <div class="service-slide-content">
+                <div class="service-slide-left">
+                    <h2 class="service-slide-title">Web Development</h2>
+                    <div class="service-slide-tags">
+                        <span class="service-tag">Frontend</span>
+                        <span class="service-tag">Backend</span>
+                        <span class="service-tag">E-commerce</span>
+                        <span class="service-tag">CMS</span>
+                    </div>
+                    <p class="service-slide-desc">Build powerful, scalable web applications with cutting-edge technologies. We deliver fast, responsive, and user-friendly websites that drive results.</p>
+                    <a href="#booking" class="service-slide-btn">
+                        <span>Get Started</span>
+                        <span class="btn-arrow">↗</span>
+                    </a>
+                </div>
+                <div class="service-slide-right">
+                    <div class="service-visual">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1200&q=80" alt="Web Development">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="service-slide">
+            <div class="service-slide-content">
+                <div class="service-slide-left">
+                    <h2 class="service-slide-title">Digital Marketing</h2>
+                    <div class="service-slide-tags">
+                        <span class="service-tag">SEO</span>
+                        <span class="service-tag">Social Media</span>
+                        <span class="service-tag">PPC</span>
+                        <span class="service-tag">Analytics</span>
+                    </div>
+                    <p class="service-slide-desc">Data-driven marketing strategies that maximize ROI. We help you reach your target audience and convert them into loyal customers.</p>
+                    <a href="#booking" class="service-slide-btn">
+                        <span>Get Started</span>
+                        <span class="btn-arrow">↗</span>
+                    </a>
+                </div>
+                <div class="service-slide-right">
+                    <div class="service-visual">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Digital Marketing">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="service-slide">
+            <div class="service-slide-content">
+                <div class="service-slide-left">
+                    <h2 class="service-slide-title">Content Creation</h2>
+                    <div class="service-slide-tags">
+                        <span class="service-tag">Copywriting</span>
+                        <span class="service-tag">Video</span>
+                        <span class="service-tag">Photography</span>
+                        <span class="service-tag">Social Content</span>
+                    </div>
+                    <p class="service-slide-desc">Engaging content that tells your story and connects with your audience. From compelling copy to stunning visuals, we create content that converts.</p>
+                    <a href="#booking" class="service-slide-btn">
+                        <span>Get Started</span>
+                        <span class="btn-arrow">↗</span>
+                    </a>
+                </div>
+                <div class="service-slide-right">
+                    <div class="service-visual">
+                        <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=1200&q=80" alt="Content Creation">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="service-slide">
+            <div class="service-slide-content">
+                <div class="service-slide-left">
+                    <h2 class="service-slide-title">Strategy Consulting</h2>
+                    <div class="service-slide-tags">
+                        <span class="service-tag">Business Strategy</span>
+                        <span class="service-tag">Growth Hacking</span>
+                        <span class="service-tag">Analytics</span>
+                        <span class="service-tag">Optimization</span>
+                    </div>
+                    <p class="service-slide-desc">Strategic insights that drive business growth. We help you make informed decisions and achieve your business objectives with data-backed strategies.</p>
+                    <a href="#booking" class="service-slide-btn">
+                        <span>Get Started</span>
+                        <span class="btn-arrow">↗</span>
+                    </a>
+                </div>
+                <div class="service-slide-right">
+                    <div class="service-visual">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80" alt="Strategy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Progress indicator -->
+    <div class="services-progress">
+        <div class="progress-bar">
+            <div class="progress-fill" id="servicesProgress"></div>
+        </div>
+        <div class="progress-text">
+            <span id="currentSlide">01</span>
+            <span class="progress-separator">/</span>
+            <span>06</span>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- CLEAN PROJECTS SECTION -->
+    <section class="projects-showcase">
+        <div class="projects-container">
+            <!-- Left Side - Sticky Header -->
+            <div class="projects-left-fixed">
+                <div class="projects-header-minimal">
+                    <span class="section-label">Our Work</span>
+                    <h2 class="section-title-minimal">
+                        Crafting Digital
+                        <span class="gradient-text">Excellence</span>
+                    </h2>
+                    <p class="section-subtitle-minimal">
+                        Explore our recent work across industries
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Right Side - Naturally Scrolling Content -->
+            <div class="projects-right-content">
+                <!-- Project 1: Social Media -->
+                <div class="project-slide" data-index="0">
+                    <div class="project-image-wrapper-large">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=2000&q=80" 
+                             alt="Social Media Campaign" 
+                             class="project-image">
+                        <div class="project-overlay-minimal">
+                            <div class="project-tags-minimal">
+                                <span class="project-tag">Instagram</span>
+                                <span class="project-tag">Facebook</span>
+                                <span class="project-tag">Content Strategy</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info-minimal">
+                        <p class="project-description-minimal">
+                            Transformed brand presence with data-driven content strategy, achieving 340% engagement increase and 2M+ organic reach in 3 months.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Project 2: E-Commerce -->
+                <div class="project-slide" data-index="1">
+                    <div class="project-image-wrapper-large">
+                        <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=2000&q=80" 
+                             alt="Shopify Store" 
+                             class="project-image">
+                        <div class="project-overlay-minimal">
+                            <div class="project-tags-minimal">
+                                <span class="project-tag">Shopify</span>
+                                <span class="project-tag">Payment Gateway</span>
+                                <span class="project-tag">Conversion</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info-minimal">
+                        <p class="project-description-minimal">
+                            Built stunning e-commerce platform with seamless payment integration. Achieved 250% increase in online sales within first quarter.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Project 3: WordPress -->
+                <div class="project-slide" data-index="2">
+                    <div class="project-image-wrapper-large">
+                        <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=2000&q=80" 
+                             alt="WordPress Website" 
+                             class="project-image">
+                        <div class="project-overlay-minimal">
+                            <div class="project-tags-minimal">
+                                <span class="project-tag">WordPress</span>
+                                <span class="project-tag">Custom Theme</span>
+                                <span class="project-tag">CMS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info-minimal">
+                        <p class="project-description-minimal">
+                            Developed custom WordPress solution with advanced CMS capabilities. Reduced content publishing time by 70% with streamlined workflows.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Project 4: Branding -->
+                <div class="project-slide" data-index="3">
+                    <div class="project-image-wrapper-large">
+                        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=2000&q=80" 
+                             alt="Brand Identity" 
+                             class="project-image">
+                        <div class="project-overlay-minimal">
+                            <div class="project-tags-minimal">
+                                <span class="project-tag">Logo Design</span>
+                                <span class="project-tag">Brand Strategy</span>
+                                <span class="project-tag">Visual Identity</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info-minimal">
+                        <p class="project-description-minimal">
+                            Created comprehensive brand identity including logo, color palette, and typography. Established strong market presence and recognition.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Project 5: SEO & Marketing -->
+                <div class="project-slide" data-index="4">
+                    <div class="project-image-wrapper-large">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2000&q=80" 
+                             alt="SEO Analytics" 
+                             class="project-image">
+                        <div class="project-overlay-minimal">
+                            <div class="project-tags-minimal">
+                                <span class="project-tag">SEO</span>
+                                <span class="project-tag">Google Ads</span>
+                                <span class="project-tag">Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info-minimal">
+                        <p class="project-description-minimal">
+                            Implemented comprehensive SEO strategy and paid campaigns. Achieved first-page Google rankings and 180% increase in organic traffic.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Project 6: CRM Integration -->
+                <div class="project-slide" data-index="5">
+                    <div class="project-image-wrapper-large">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=2000&q=80" 
+                             alt="CRM Dashboard" 
+                             class="project-image">
+                        <div class="project-overlay-minimal">
+                            <div class="project-tags-minimal">
+                                <span class="project-tag">Zoho CRM</span>
+                                <span class="project-tag">Automation</span>
+                                <span class="project-tag">Integration</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info-minimal">
+                        <p class="project-description-minimal">
+                            Implemented Zoho CRM with custom automation workflows. Streamlined business operations and improved lead tracking by 180%.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+            <!-- ==========  ELITESDEV – FULL TESTIMONIALS SECTION  ========== -->
+
+<!-- NEW TESTIMONIALS SECTION - Replace existing testimonials section -->
+<section id="testimonials" class="testimonials-modern scroll-fade">
+    <!-- Animated background -->
+    <div class="testimonials-bg">
+        <div class="testimonials-orb testimonials-orb-1"></div>
+        <div class="testimonials-orb testimonials-orb-2"></div>
+        <div class="testimonials-orb testimonials-orb-3"></div>
+    </div>
+    
+    <div class="testimonials-header">
+        <span class="section-label">What Our Clients Say</span>
+        <h2 class="section-title">We're more than just executors — <span class="gradient-text">we're your creative partners</span></h2>
+        <p class="section-subtitle">Don't just take our word for it, see what clients have to say about working with us.</p>
+        
+        <!-- Clutch Rating -->
+        <div class="clutch-badge">
+            <img src="https://cdn.prod.website-files.com/5f5e5f5e5f5e5f5e5f5e5f5e/clutch-logo.svg" alt="Clutch" style="height: 24px; filter: brightness(0) invert(1);" onerror="this.style.display='none'">
+            <div class="clutch-rating">
+                <span class="clutch-score">4.9/5.0</span>
+                <div class="clutch-stars">★★★★★</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonials-slider-wrapper">
+        <button class="testimonials-nav testimonials-nav-prev" id="testimonialsNavPrev">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </button>
+        
+        <div class="testimonials-track-container" id="testimonialsTrackContainer">
+            <div class="testimonials-track" id="testimonialsTrack">
+                <!-- Card 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-card-header">
+                        <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="Client" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Sanidhya</h4>
+                            <p class="testimonial-role">CEO at <span class="company-highlight">TechStart</span></p>
+                        </div>
+                        <div class="testimonial-logo">
+                            <svg width="80" height="24" viewBox="0 0 80 24" fill="currentColor" opacity="0.4">
+                                <text x="0" y="18" font-family="Arial" font-weight="bold" font-size="16">ENVATO</text>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">Chandan and his team have been managing our multiple social media accounts and website projects for several clients. Their work quality is consistently amazing.</p>
+                    <a href="#booking" class="testimonial-link">
+                        <span>Project Page</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-card-header">
+                        <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Client" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Udit Singh</h4>
+                            <p class="testimonial-role">Marketing Director at <span class="company-highlight">GrowthHub</span></p>
+                        </div>
+                        <div class="testimonial-logo">
+                            <svg width="80" height="24" viewBox="0 0 80 24" fill="currentColor" opacity="0.4">
+                                <circle cx="12" cy="12" r="8"/><circle cx="32" cy="12" r="8"/><circle cx="52" cy="12" r="8"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">The project exceeded our expectations! Chandan and his team delivered exceptional results on time and maintained excellent communication throughout.</p>
+                    <a href="#booking" class="testimonial-link">
+                        <span>Project Page</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-card-header">
+                        <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Client" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Suhas</h4>
+                            <p class="testimonial-role">Founder at <span class="company-highlight">Innovate Labs</span></p>
+                        </div>
+                        <div class="testimonial-logo">
+                            <svg width="80" height="24" viewBox="0 0 80 24" fill="currentColor" opacity="0.4">
+                                <rect x="0" y="4" width="16" height="16" rx="3"/>
+                                <rect x="20" y="8" width="12" height="8" rx="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">Working with ElitesDev was an exceptional experience from start to finish. Truly proud to have worked with such a talented team.</p>
+                    <a href="#booking" class="testimonial-link">
+                        <span>Project Page</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-card-header">
+                        <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="Client" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Joseph</h4>
+                            <p class="testimonial-role">Product Manager at <span class="company-highlight">Digital Flow</span></p>
+                        </div>
+                        <div class="testimonial-logo">
+                            <svg width="80" height="24" viewBox="0 0 80 24" fill="currentColor" opacity="0.4">
+                                <path d="M12 2L2 12L12 22M12 12H22"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">They delivered our e-commerce platform on schedule with all requested features. The ongoing support is excellent.</p>
+                    <a href="#booking" class="testimonial-link">
+                        <span>Project Page</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <!-- Card 5 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-card-header">
+                        <img src="https://randomuser.me/api/portraits/men/60.jpg" alt="Client" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Aneesh</h4>
+                            <p class="testimonial-role">CTO at <span class="company-highlight">CloudStack</span></p>
+                        </div>
+                        <div class="testimonial-logo">
+                            <svg width="80" height="24" viewBox="0 0 80 24" fill="currentColor" opacity="0.4">
+                                <circle cx="12" cy="12" r="10"/><path d="M12 6V18M6 12H18"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">The team at ElitesDev is simply fantastic! Their attention to detail and responsive communication made the process stress-free.</p>
+                    <a href="#booking" class="testimonial-link">
+                        <span>Project Page</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <!-- Card 6 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-card-header">
+                        <img src="https://randomuser.me/api/portraits/men/70.jpg" alt="Client" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Amit Jain</h4>
+                            <p class="testimonial-role">Business Owner at <span class="company-highlight">RetailPro</span></p>
+                        </div>
+                        <div class="testimonial-logo">
+                            <svg width="80" height="24" viewBox="0 0 80 24" fill="currentColor" opacity="0.4">
+                                <rect width="24" height="24" rx="4"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">★★★★☆</div>
+                    <p class="testimonial-text">ElitesDev transformed our business website beautifully. Their technical and creative balance is remarkable.</p>
+                    <a href="#booking" class="testimonial-link">
+                        <span>Project Page</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <button class="testimonials-nav testimonials-nav-next" id="testimonialsNavNext">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </button>
+    </div>
+    
+    <!-- Progress dots -->
+    <div class="testimonials-dots" id="testimonialsDots"></div>
+</section>
+
+
+
+<section id="faq" class="faq-section-enhanced scroll-fade">
+    <!-- Background image only for FAQ section -->
+    <div class="faq-bg-orbs" style="background: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=2400&q=80') center/cover; opacity: 0.15; position: absolute; inset: 0; z-index: 0;"></div>
+    
+<div class="faq-wrapper">
+    <!-- Enhanced header with stats -->
+    <div class="faq-header-enhanced">
+        <span class="section-label">FAQ</span>
+        <h2 class="section-title">
+            Got Questions? <span class="gradient-text">We've Got Answers</span>
+        </h2>
+        <p class="section-subtitle">
+            Everything you need to know about our services, process, and how we can help transform your digital presence.
+        </p>
+        
+        <div class="faq-stats-row">
+            <div class="faq-stat-item">
+                <div class="faq-stat-number">98%</div>
+                <div class="faq-stat-label">Satisfaction Rate</div>
+            </div>
+            <div class="faq-stat-item">
+                <div class="faq-stat-number">24h</div>
+                <div class="faq-stat-label">Response Time</div>
+            </div>
+            <div class="faq-stat-item">
+                <div class="faq-stat-number">250+</div>
+                <div class="faq-stat-label">Projects Delivered</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- FAQ Grid -->
+    <div class="faq-grid">
+        <!-- FAQ 1 -->
+        <div class="faq-card" onclick="toggleFaqEnhanced(this)">
+            <div class="faq-question-wrapper">
+                <div class="faq-question-content">
+                    <span class="faq-number">01</span>
+                    <h3 class="faq-question-text">What makes your agency different from others?</h3>
+                </div>
+                <div class="faq-icon-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="faq-answer-wrapper">
+                <div class="faq-answer-content">
+                    <p class="faq-answer-text">We focus on a personalized approach, ensuring every project is tailored to meet your unique needs. Our team combines creativity with technical expertise to deliver exceptional results that drive real business growth.</p>
+                    <div class="faq-tags">
+                        <span class="faq-tag">Custom Solutions</span>
+                        <span class="faq-tag">Expert Team</span>
+                        <span class="faq-tag">Proven Results</span>
+                    </div>
+                    <a href="#booking" class="faq-cta-link">
+                        <span>Start Your Project</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FAQ 2 -->
+        <div class="faq-card" onclick="toggleFaqEnhanced(this)">
+            <div class="faq-question-wrapper">
+                <div class="faq-question-content">
+                    <span class="faq-number">02</span>
+                    <h3 class="faq-question-text">What services does your agency offer?</h3>
+                </div>
+                <div class="faq-icon-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="faq-answer-wrapper">
+                <div class="faq-answer-content">
+                    <p class="faq-answer-text">We provide web development, branding & identity, digital marketing, content creation, social media management, and e-commerce solutions. Each service is designed to help businesses establish a powerful digital presence and achieve measurable growth.</p>
+                    <div class="faq-tags">
+                        <span class="faq-tag">Web Development</span>
+                        <span class="faq-tag">Branding</span>
+                        <span class="faq-tag">Digital Marketing</span>
+                    </div>
+                    <a href="#services" class="faq-cta-link">
+                        <span>View All Services</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FAQ 3 -->
+        <div class="faq-card" onclick="toggleFaqEnhanced(this)">
+            <div class="faq-question-wrapper">
+                <div class="faq-question-content">
+                    <span class="faq-number">03</span>
+                    <h3 class="faq-question-text">How long does a typical project take?</h3>
+                </div>
+                <div class="faq-icon-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="faq-answer-wrapper">
+                <div class="faq-answer-content">
+                    <p class="faq-answer-text">Project timelines vary based on complexity and scope. A basic website may take 2-4 weeks, while comprehensive branding and marketing campaigns could take 6-12 weeks. We always provide a detailed timeline during our initial consultation.</p>
+                    <div class="faq-tags">
+                        <span class="faq-tag">Fast Delivery</span>
+                        <span class="faq-tag">On Schedule</span>
+                        <span class="faq-tag">Quality Assured</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FAQ 4 -->
+        <div class="faq-card" onclick="toggleFaqEnhanced(this)">
+            <div class="faq-question-wrapper">
+                <div class="faq-question-content">
+                    <span class="faq-number">04</span>
+                    <h3 class="faq-question-text">Do you work with small businesses?</h3>
+                </div>
+                <div class="faq-icon-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="faq-answer-wrapper">
+                <div class="faq-answer-content">
+                    <p class="faq-answer-text">Absolutely! We specialize in helping businesses of all sizes, from startups to enterprises. We offer flexible packages and scalable solutions that fit your budget while delivering professional results that compete with larger brands.</p>
+                    <div class="faq-tags">
+                        <span class="faq-tag">Flexible Pricing</span>
+                        <span class="faq-tag">Startup Friendly</span>
+                        <span class="faq-tag">Growth Focused</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FAQ 5 -->
+        <div class="faq-card" onclick="toggleFaqEnhanced(this)">
+            <div class="faq-question-wrapper">
+                <div class="faq-question-content">
+                    <span class="faq-number">05</span>
+                    <h3 class="faq-question-text">What is your pricing structure?</h3>
+                </div>
+                <div class="faq-icon-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="faq-answer-wrapper">
+                <div class="faq-answer-content">
+                    <p class="faq-answer-text">We offer transparent, project-based pricing tailored to your specific needs. After understanding your requirements during our free consultation, we provide a detailed quote with no hidden fees. We also offer flexible payment plans for larger projects.</p>
+                    <div class="faq-tags">
+                        <span class="faq-tag">Transparent</span>
+                        <span class="faq-tag">No Hidden Fees</span>
+                        <span class="faq-tag">Flexible Terms</span>
+                    </div>
+                    <a href="#booking" class="faq-cta-link">
+                        <span>Get a Quote</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FAQ 6 -->
+        <div class="faq-card" onclick="toggleFaqEnhanced(this)">
+            <div class="faq-question-wrapper">
+                <div class="faq-question-content">
+                    <span class="faq-number">06</span>
+                    <h3 class="faq-question-text">Do you provide ongoing support?</h3>
+                </div>
+                <div class="faq-icon-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="faq-answer-wrapper">
+                <div class="faq-answer-content">
+                    <p class="faq-answer-text">Yes! We offer comprehensive maintenance packages, including website updates, performance monitoring, security patches, content updates, and technical support. Our team is always available to ensure your digital assets continue performing at their best.</p>
+                    <div class="faq-tags">
+                        <span class="faq-tag">24/7 Support</span>
+                        <span class="faq-tag">Regular Updates</span>
+                        <span class="faq-tag">Peace of Mind</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+            <!-- ==========  END – paste anywhere in body  ========== -->
+
+ <!-- Replace the existing booking section with this -->
+<section id="booking" class="booking-section-redesigned">
+    <!-- Animated background -->
+    <div class="booking-bg">
+        <div class="booking-orb booking-orb-1"></div>
+        <div class="booking-orb booking-orb-2"></div>
+        <div class="booking-orb booking-orb-3"></div>
+        <div class="booking-grid-overlay"></div>
+    </div>
+    
+    <div class="booking-container">
+        <!-- Left side - Hero content -->
+        <div class="booking-hero">
+            <div class="booking-badge">
+                <span class="badge-pulse"></span>
+                <span>Let's Create Something Amazing</span>
+            </div>
+            
+            <h2 class="booking-hero-title">
+                <span class="title-line-1">Ready to Transform</span>
+                <span class="title-line-2 gradient-text">Your Vision?</span>
+            </h2>
+            
+            <p class="booking-hero-desc">
+                Join 250+ successful brands who trusted us to elevate their digital presence. 
+                Let's discuss how we can bring your project to life.
+            </p>
+            
+            <!-- Stats grid -->
+            <div class="booking-stats-grid">
+                <div class="booking-stat-card">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-content">
+                        <div class="stat-number">24h</div>
+                        <div class="stat-label">Response Time</div>
+                    </div>
+                </div>
+                <div class="booking-stat-card">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-content">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Success Rate</div>
+                    </div>
+                </div>
+                <div class="booking-stat-card">
+                    <div class="stat-icon">🚀</div>
+                    <div class="stat-content">
+                        <div class="stat-number">250+</div>
+                        <div class="stat-label">Projects Done</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Visual elements -->
+            <div class="booking-visual-elements">
+                <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=80" alt="Team" class="visual-img visual-img-1">
+                <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80" alt="Strategy" class="visual-img visual-img-2">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="Innovation" class="visual-img visual-img-3">
+                
+                <!-- Floating shapes -->
+                <div class="floating-shape-booking shape-1"></div>
+                <div class="floating-shape-booking shape-2"></div>
+            </div>
+            
+            <!-- Trust badges -->
+            <div class="booking-trust-badges">
+                <div class="trust-badge">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        <path d="M9 12l2 2 4-4"/>
+                    </svg>
+                    <span>100% Secure</span>
+                </div>
+                <div class="trust-badge">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                    <span>NDA Available</span>
+                </div>
+                <div class="trust-badge">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 6v6l4 2"/>
+                    </svg>
+                    <span>24/7 Support</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right side - Form -->
+        <div class="booking-form-wrapper">
+            <div class="form-header">
+                <h3 class="form-title">Let's Talk About Your Project</h3>
+                <p class="form-subtitle">Fill out the form and we'll get back to you within 24 hours</p>
+            </div>
+            
+            <form id="bookingFormRedesigned" class="booking-form-redesigned">
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="fullName">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                            Full Name *
+                        </label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="John Doe" class="form-input">
+                        <div class="input-focus-border"></div>
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="email">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <path d="M22 6l-10 7L2 6"/>
+                            </svg>
+                            Email Address *
+                        </label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com" class="form-input">
+                        <div class="input-focus-border"></div>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="phone">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            Phone Number
+                        </label>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 234 567 8900" class="form-input">
+                        <div class="input-focus-border"></div>
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="company">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                <path d="M9 22V12h6v10"/>
+                            </svg>
+                            Company Name
+                        </label>
+                        <input type="text" id="company" name="company" placeholder="Your Company" class="form-input">
+                        <div class="input-focus-border"></div>
+                    </div>
+                </div>
+                
+                <div class="form-field">
+                    <label for="service">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                        Select Service *
+                    </label>
+                    <div class="custom-select">
+                        <select id="service" name="service" required class="form-input">
+                            <option value="">Choose a service...</option>
+                            <option value="branding">🎨 Branding & Identity</option>
+                            <option value="web-dev">💻 Web Development</option>
+                            <option value="marketing">📊 Digital Marketing</option>
+                            <option value="content">✍️ Content Creation</option>
+                            <option value="social">📱 Social Media Management</option>
+                            <option value="ecommerce">🛒 E-commerce Solutions</option>
+                            <option value="consulting">🎯 Strategy Consulting</option>
+                        </select>
+                        <div class="select-arrow">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="input-focus-border"></div>
+                </div>
+                
+                
+                <div class="form-field">
+                    <label for="message">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                        Tell Us About Your Project *
+                    </label>
+                    <textarea id="message" name="message" required placeholder="Share your vision, goals, and any specific requirements..." class="form-textarea" rows="3"></textarea>
+                    <div class="input-focus-border"></div>
+                    <div class="char-counter">
+                        <span id="charCount">0</span> / 500 characters
+                    </div>
+                </div>
+                
+                <div class="form-field checkbox-field">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter" class="checkbox-label">
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">Subscribe to our newsletter for tips, insights, and exclusive offers</span>
+                    </label>
+                </div>
+                
+                <button type="submit" class="submit-btn-redesigned">
+                    <span class="btn-text">Send Message</span>
+                    <span class="btn-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                        </svg>
+                    </span>
+                    <span class="btn-shimmer"></span>
+                </button>
+            </form>
+            
+            <!-- Contact alternatives -->
+            <div class="contact-alternatives">
+                <div class="divider">
+                    <span>Or reach us directly</span>
+                </div>
+                <div class="contact-methods">
+                    <a href="mailto:contact@elitesdev.com" class="contact-method">
+                        <div class="method-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <path d="M22 6l-10 7L2 6"/>
+                            </svg>
+                        </div>
+                        <div class="method-details">
+                            <span class="method-label">Email Us</span>
+                            <span class="method-value">contact@elitesdev.com</span>
+                        </div>
+                    </a>
+                    <a href="tel:+917757907676" class="contact-method">
+                        <div class="method-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </div>
+                        <div class="method-details">
+                            <span class="method-label">Call Us</span>
+                            <span class="method-value">+91 77579 07676</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+ 
+    <!-- Bottom CTA 
+    <div class="faq-bottom-cta scroll-fade">
+        <h3 class="faq-cta-title">Still Have Questions?</h3>
+        <p class="faq-cta-subtitle">Our team is here to help! Get in touch and let's discuss how we can bring your vision to life.</p>
+        <div class="faq-cta-buttons">
+            <a href="#booking" class="faq-cta-btn faq-cta-primary">
+                <span>Schedule a Call</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+            <a href="mailto:contact@elitesdev.com" class="faq-cta-btn faq-cta-secondary">
+                <span>Email Us</span>
+            </a>
+        </div>
+    </div>
+</div>
+</section>
+-->
+
+ <!-- REVOLUTIONARY FOOTER -->
+<footer style="position: relative; overflow: hidden; background: #000; border-top: none;">
+    <!-- Animated Background -->
+    <div style="position: absolute; inset: 0; pointer-events: none; z-index: 0;">
+        <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255, 215, 0, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 215, 0, 0.02) 1px, transparent 1px); background-size: 50px 50px; animation: gridMove 30s linear infinite;"></div>
+        <div style="position: absolute; width: 500px; height: 500px; background: linear-gradient(135deg, #FFD700, #FFA500); border-radius: 50%; filter: blur(120px); opacity: 0.15; top: -20%; left: -10%; animation: float 25s ease-in-out infinite;"></div>
+        <div style="position: absolute; width: 400px; height: 400px; background: linear-gradient(135deg, #00D4FF, #0099FF); border-radius: 50%; filter: blur(120px); opacity: 0.15; bottom: -20%; right: -10%; animation: float 25s ease-in-out infinite; animation-delay: 10s;"></div>
+    </div>
+
+  
+
+        <!-- Newsletter Section -->
+        <div style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 165, 0, 0.05)); backdrop-filter: blur(30px); border: 2px solid rgba(255, 215, 0, 0.3); border-radius: 24px; padding: 3rem; margin-bottom: 6rem; position: relative; overflow: hidden;">
+            <div style="position: absolute; top: 0; left: -50%; width: 200%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.05), transparent); animation: shimmer 3s infinite;"></div>
+            <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 3rem; align-items: center; position: relative; z-index: 1;">
+                <div>
+                    <div style="font-size: 2rem; font-weight: 900; margin-bottom: 1rem; color: #fff;">Stay Updated</div>
+                    <p style="color: rgba(255, 255, 255, 0.7); line-height: 1.7;">Subscribe to our newsletter for the latest updates, tips, and exclusive offers.</p>
+                </div>
+                <div style="display: flex; gap: 1rem;">
+                    <input type="email" placeholder="Enter your email..." style="flex: 1; padding: 1.25rem 1.75rem; background: rgba(0, 0, 0, 0.3); border: 2px solid rgba(255, 215, 0, 0.3); border-radius: 50px; color: #fff; font-size: 1rem; outline: none; transition: all 0.3s;">
+                    <button style="padding: 1.25rem 2.5rem; background: linear-gradient(135deg, #FFD700, #FFA500); border: none; border-radius: 50px; color: #000; font-weight: 700; font-size: 1rem; cursor: pointer; white-space: nowrap; transition: all 0.3s; box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);">Subscribe</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Links Grid -->
+        <div style="display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 5rem;">
+            <!-- Company Info -->
+            <div>
+                <div style="font-size: 2.5rem; font-weight: 900; margin-bottom: 1.5rem; display: flex; gap: 2px;">
+                    <span style="color: #FFD700; text-shadow: 0 0 30px rgba(255, 215, 0, 0.6);">ELITES</span>
+                    <span style="color: #fff;">DEV</span>
+                </div>
+                <p style="color: rgba(255, 255, 255, 0.7); line-height: 1.7; margin-bottom: 2rem; font-size: 0.95rem;">Creating digital experiences that drive growth and deliver measurable results. Your success is our passion.</p>
+                
+                <!-- Social Links with Glow Effect -->
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="#" style="width: 48px; height: 48px; background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 165, 0, 0.05)); backdrop-filter: blur(20px); border: 2px solid rgba(255, 215, 0, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #FFD700; text-decoration: none; font-size: 1.2rem; transition: all 0.3s; box-shadow: 0 5px 20px rgba(255, 215, 0, 0.2);">𝕏</a>
+                    <a href="#" style="width: 48px; height: 48px; background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 165, 0, 0.05)); backdrop-filter: blur(20px); border: 2px solid rgba(255, 215, 0, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #FFD700; text-decoration: none; font-size: 1.2rem; transition: all 0.3s; box-shadow: 0 5px 20px rgba(255, 215, 0, 0.2);">in</a>
+                    <a href="#" style="width: 48px; height: 48px; background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 165, 0, 0.05)); backdrop-filter: blur(20px); border: 2px solid rgba(255, 215, 0, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #FFD700; text-decoration: none; font-size: 1.2rem; transition: all 0.3s; box-shadow: 0 5px 20px rgba(255, 215, 0, 0.2);">📷</a>
+                    <a href="#" style="width: 48px; height: 48px; background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 165, 0, 0.05)); backdrop-filter: blur(20px); border: 2px solid rgba(255, 215, 0, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #FFD700; text-decoration: none; font-size: 1.2rem; transition: all 0.3s; box-shadow: 0 5px 20px rgba(255, 215, 0, 0.2);">▶</a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem; color: #fff; position: relative; padding-bottom: 0.75rem;">
+                    Quick Links
+                    <span style="position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background: linear-gradient(90deg, #FFD700, #FFA500); border-radius: 2px;"></span>
+                </h4>
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <a href="#home" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> Home
+                    </a>
+                    <a href="#about" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> About Us
+                    </a>
+                    <a href="#services" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> Services
+                    </a>
+                    <a href="#projects" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> Portfolio
+                    </a>
+                </div>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem; color: #fff; position: relative; padding-bottom: 0.75rem;">
+                    Services
+                    <span style="position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background: linear-gradient(90deg, #FFD700, #FFA500); border-radius: 2px;"></span>
+                </h4>
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <a href="#branding" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> Branding
+                    </a>
+                    <a href="#web-dev" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> Web Development
+                    </a>
+                    <a href="#marketing" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> Digital Marketing
+                    </a>
+                    <a href="#content" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> Content Creation
+                    </a>
+                </div>
+            </div>
+
+            <!-- Company -->
+            <div>
+                <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem; color: #fff; position: relative; padding-bottom: 0.75rem;">
+                    Company
+                    <span style="position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background: linear-gradient(90deg, #FFD700, #FFA500); border-radius: 2px;"></span>
+                </h4>
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <a href="#about" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> Our Story
+                    </a>
+                    <a href="#team" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> Team
+                    </a>
+                    <a href="#testimonials" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> Testimonials
+                    </a>
+                    <a href="#careers" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> Careers
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem; color: #fff; position: relative; padding-bottom: 0.75rem;">
+                    Contact
+                    <span style="position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background: linear-gradient(90deg, #FFD700, #FFA500); border-radius: 2px;"></span>
+                </h4>
+                <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                    <a href="tel:+917757907676" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700; font-size: 1.2rem;">📞</span>
+                        <span>+91 77579 07676</span>
+                    </a>
+                    <a href="mailto:contact@elitesdev.com" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700; font-size: 1.2rem;">✉️</span>
+                        <span>contact@elitesdev.com</span>
+                    </a>
+                    <a href="#location" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700; font-size: 1.2rem;">📍</span>
+                        <span>Chennai, Tamil Nadu, India</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div style="padding-top: 3rem; border-top: 1px solid rgba(255, 215, 0, 0.2); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
+            <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.95rem; margin: 0;">
+                &copy; 2025 ElitesDev. All Rights Reserved. 
+                <span style="color: #FFD700; font-weight: 600;">Crafted with ❤️</span>
+            </p>
+            <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                <a href="#privacy" style="color: rgba(255, 255, 255, 0.6); text-decoration: none; font-size: 0.95rem; transition: color 0.3s;">Privacy Policy</a>
+                <a href="#terms" style="color: rgba(255, 255, 255, 0.6); text-decoration: none; font-size: 0.95rem; transition: color 0.3s;">Terms of Service</a>
+                <a href="#cookies" style="color: rgba(255, 255, 255, 0.6); text-decoration: none; font-size: 0.95rem; transition: color 0.3s;">Cookie Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://unpkg.com/@studio-freight/lenis@1/dist/lenis.min.js"></script>
+<script src="script.js"></script> 
+</body>
+</html>
+
