@@ -1,0 +1,2144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ElitesDev Services - Branding, Web Development & Strategy Consulting">
+<meta name="description" content="ElitesDev Services - Book Your Consultation">
+<meta name="author" content="ElitesDev">
+    <title>Our Services - ElitesDev</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollSmoother.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@studio-freight/lenis@1/dist/lenis.css">
+</head>
+<body>
+
+<style>
+
+        .btn-talk { 
+            background: transparent;
+            border: 2px solid #040404;
+            color: #000; /* CHANGED FROM #FF6B00 */
+            font-weight: 800;
+        }
+        .btn-talk:hover { 
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            border: 2px solid #FFA500;
+            color: #000;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(255, 215, 0, 0.5);
+        }
+ /* ============================================
+   CUSTOM CURSOR (FROM MAIN PAGE)
+   ============================================ */
+body {
+    cursor: none;
+}
+
+a, button, .btn, .service-card, .testimonial-card, .faq-card, 
+.project-slide, .nav-menu a, .social-link, input, textarea, select,
+[role="button"], [onclick], .service-slide, .service-slide-btn, .category-btn {
+    cursor: none !important;
+}
+
+.custom-cursor {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: #FFD700;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+                background 0.2s ease,
+                opacity 0.2s ease;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+    transform: translate(-50%, -50%);
+}
+
+.custom-cursor-trail {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 215, 0, 0.5);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99998;
+    transition: opacity 0.3s ease;
+    transform: translate(-50%, -50%);
+}
+
+.custom-cursor.hover {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 215, 0, 0.1);
+    border: 2px solid #FFD700;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+}
+
+.custom-cursor.text-hover {
+    width: 2px;
+    height: 20px;
+    border-radius: 2px;
+    background: #FFD700;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+}
+
+.custom-cursor.click {
+    transform: translate(-50%, -50%) scale(0.7);
+}
+
+@media (hover: none) and (pointer: coarse) {
+    body {
+        cursor: auto;
+    }
+    
+    .custom-cursor,
+    .custom-cursor-trail {
+        display: none !important;
+    }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fustat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* ============================================
+   LANDING HERO SECTION
+   ============================================ */
+.edw-landing-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.edw-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.edw-hero-bg-image {
+    position: absolute;
+    inset: 0;
+    background: 
+        url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2400&q=80 ') center/cover,
+        linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.85));
+    background-blend-mode: overlay;
+    opacity: 0.5;
+}
+
+.edw-grid-overlay {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(rgba(255, 215, 0, 0.05) 2px, transparent 2px),
+        linear-gradient(90deg, rgba(255, 215, 0, 0.05) 2px, transparent 2px);
+    background-size: 80px 80px;
+    animation: gridFloat 25s linear infinite;
+    opacity: 0.3;
+}
+
+@keyframes gridFloat {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(80px, 80px); }
+}
+
+.edw-floating-element {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.25;
+    animation: float 20s ease-in-out infinite;
+}
+
+.edw-float-1 {
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    top: -10%;
+    left: -10%;
+    animation-delay: 0s;
+}
+
+.edw-float-2 {
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(135deg, #00D4FF, #0099FF);
+    bottom: -10%;
+    right: -5%;
+    animation-delay: 7s;
+}
+
+.edw-float-3 {
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    top: 30%;
+    right: 5%;
+    animation-delay: 14s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+    33% { transform: translate(50px, -70px) scale(1.1) rotate(120deg); }
+    66% { transform: translate(-30px, 50px) scale(0.9) rotate(240deg); }
+}
+
+.edw-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1400px;
+    width: 100%;
+    text-align: center;
+}
+
+.edw-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.75rem;
+    background: rgba(255, 215, 0, 0.1);
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    border-radius: 50px;
+    margin-bottom: 3rem;
+    backdrop-filter: blur(20px);
+    animation: badgeFloat 3s ease-in-out infinite;
+}
+
+@keyframes badgeFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.edw-badge-pulse {
+    width: 8px;
+    height: 8px;
+    background: #FFD700;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #FFD700;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.3); }
+}
+
+.edw-badge-text {
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+.edw-hero-title {
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    margin-bottom: 2rem;
+    animation: titleAppear 1s ease-out;
+}
+
+@keyframes titleAppear {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.edw-title-line {
+    display: block;
+}
+
+.edw-gradient-text {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% center; }
+    50% { background-position: 100% center; }
+}
+
+.edw-hero-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 800px;
+    margin: 0 auto 0;   
+    line-height: 1.6;
+    animation: subtitleAppear 1s ease-out 0.3s both;
+}
+
+@keyframes subtitleAppear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.edw-scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(15px); }
+}
+
+.edw-scroll-text {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.edw-scroll-line {
+    width: 2px;
+    height: 60px;
+    background: linear-gradient(to bottom, rgba(255, 215, 0, 0.8), transparent);
+}
+
+/* ============================================
+   TWO-COLUMN BOOKING SECTION
+   ============================================ */
+.edw-consultation-wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.edw-consultation-backdrop {
+    position: absolute;
+    inset: 0;
+    background: 
+        radial-gradient(circle at 30% 20%, rgba(255, 215, 0, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 70% 80%, rgba(255, 165, 0, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(0, 212, 255, 0.05) 0%, transparent 50%),
+        linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 100%);
+}
+
+.edw-consultation-inner {
+    max-width: 1400px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.edw-consultation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 4rem;
+    align-items: center;
+    width: 100%;
+}
+
+/* Left Column - Minimal Info */
+.edw-consultation-info-block {
+    padding: 2rem 0;
+    animation: fadeInLeft 1s ease-out;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.edw-info-badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: rgba(255, 215, 0, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    color: #FFD700;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.5rem;
+    animation: badgeGlow 2s ease-in-out infinite;
+}
+
+@keyframes badgeGlow {
+    0%, 100% { box-shadow: 0 0 10px rgba(255, 215, 0, 0.2); }
+    50% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.4); }
+}
+
+.edw-info-heading {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.edw-info-subheading {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+/* Right Column - Form */
+.edw-consultation-form-block {
+    background: linear-gradient(135deg, rgba(26, 26, 46, 0.98), rgba(15, 15, 30, 0.98));
+    backdrop-filter: blur(40px);
+    border: 2px solid rgba(255, 215, 0, 0.25);
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.7),
+        0 0 80px rgba(255, 215, 0, 0.12) inset;
+    border-radius: 28px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    height: 85vh;
+    max-height: 700px;
+    display: flex;
+    flex-direction: column;
+    animation: fadeInRight 1s ease-out;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.edw-consultation-form-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.08), transparent);
+    animation: shimmer 5s infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Progress Steps */
+.edw-wizard-progress-wrap {
+    margin-bottom: 2rem;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.edw-wizard-steps-track {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 0 1.5rem;
+}
+
+.edw-wizard-bg-rail {
+    position: absolute;
+    top: 20px;
+    left: 12%;
+    right: 12%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 0;
+}
+
+.edw-wizard-active-rail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #FFD700, #FFA500);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+    width: 0%;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.edw-wizard-step-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    position: relative;
+    z-index: 1;
+}
+
+.edw-wizard-step-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.edw-wizard-step-circle::after {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.edw-wizard-step-item.edw-is-active .edw-wizard-step-circle {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #000;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.7);
+    border-color: transparent;
+    transform: scale(1.15);
+}
+
+.edw-wizard-step-item.edw-is-active .edw-wizard-step-circle::after {
+    border-color: rgba(255, 215, 0, 0.4);
+}
+
+.edw-wizard-step-item.edw-is-done .edw-wizard-step-circle {
+    background: linear-gradient(135deg, #10B981, #059669);
+    border-color: transparent;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+}
+
+.edw-wizard-step-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.4);
+    transition: color 0.3s ease;
+}
+
+.edw-wizard-step-item.edw-is-active .edw-wizard-step-title {
+    color: #FFD700;
+}
+
+.edw-wizard-step-item.edw-is-done .edw-wizard-step-title {
+    color: #10B981;
+}
+
+/* Form Steps */
+.edw-wizard-form-area {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.edw-wizard-panel {
+    display: none;
+    flex-direction: column;
+    height: 100%;
+}
+
+.edw-wizard-panel.edw-is-visible {
+    display: flex;
+    animation: panelSlide 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes panelSlide {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.edw-panel-heading {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.edw-panel-subtext {
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.edw-wizard-panel-content {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.edw-wizard-panel-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.edw-wizard-panel-content::-webkit-scrollbar-track {
+    background: rgba(255, 215, 0, 0.05);
+    border-radius: 10px;
+}
+
+.edw-wizard-panel-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 215, 0, 0.3);
+    border-radius: 10px;
+}
+
+.edw-wizard-panel-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 215, 0, 0.5);
+}
+
+.edw-field-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.edw-input-wrapper {
+    position: relative;
+}
+
+.edw-input-wrapper.edw-span-full {
+    grid-column: 1 / -1;
+}
+
+.edw-input-tag {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.85rem;
+}
+
+.edw-asterisk {
+    color: #FFD700; 
+    margin-left: 0.25rem;
+}
+
+.edw-text-field,
+.edw-text-area-field,
+.edw-dropdown-field {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    background: rgba(255, 215, 0, 0.06);
+    border: 2px solid rgba(255, 215, 0, 0.2);
+    border-radius: 12px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 0.9rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+}
+
+.edw-text-field::placeholder,
+.edw-text-area-field::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.edw-text-field:focus,
+.edw-text-area-field:focus,
+.edw-dropdown-field:focus {
+    background: rgba(255, 215, 0, 0.12);
+    border-color: rgba(255, 215, 0, 0.6);
+    box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.15),
+            0 10px 30px rgba(255, 215, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.edw-text-area-field {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.edw-dropdown-field {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg ' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23FFD700' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 3rem;
+}
+
+.edw-dropdown-field option {
+    background: #1a1a2e;
+    color: #fff;
+}
+
+/* Service Selection Cards */
+.edw-option-cards-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+}
+
+.edw-option-card-label {
+    position: relative;
+    padding: 1.25rem;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.08), rgba(255, 165, 0, 0.06));
+    border: 2px solid rgba(255, 215, 0, 0.2);
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.edw-option-card-label:hover {
+    transform: translateX(4px);
+    border-color: rgba(255, 215, 0, 0.5);
+    box-shadow: 0 10px 40px rgba(255, 215, 0, 0.25);
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.12), rgba(255, 165, 0, 0.1));
+}
+
+.edw-option-card-label input[type="radio"] {
+    display: none;
+}
+
+.edw-option-card-label.edw-is-chosen {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 165, 0, 0.15));
+    border-color: #FFD700;
+    box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.15),
+        0 20px 50px rgba(255, 215, 0, 0.3);
+}
+
+.edw-option-emoji {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.edw-option-text-group {
+    flex: 1;
+}
+
+.edw-option-name-text {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 0.25rem;
+}
+
+.edw-option-desc-text {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.4;
+}
+
+.edw-option-check-icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.edw-option-card-label.edw-is-chosen .edw-option-check-icon {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.edw-option-check-icon svg {
+    width: 14px;
+    height: 14px;
+    stroke: #000;
+    stroke-width: 3;
+}
+
+/* Navigation Buttons */
+.edw-wizard-nav-bar {
+    display: flex;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+.edw-wizard-btn {
+    flex: 1;
+    padding: 1rem 1.75rem;
+    border-radius: 12px;
+    border: none;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.edw-wizard-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.edw-wizard-btn:hover::before {
+    transform: translateX(100%);
+}
+
+.edw-wizard-btn-main {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #000;
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+}
+
+.edw-wizard-btn-main:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.6);
+}
+
+.edw-wizard-btn-alt {
+    background: transparent;
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    color: #fff;
+}
+
+.edw-wizard-btn-alt:hover {
+    background: rgba(255, 215, 0, 0.1);
+    border-color: rgba(255, 215, 0, 0.5);
+    transform: translateY(-3px);
+}
+
+.edw-wizard-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.edw-wizard-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.edw-wizard-btn:hover svg {
+    transform: translateX(5px);
+}
+
+.edw-wizard-btn-alt:hover svg {
+    transform: translateX(-5px);
+}
+
+.edw-text-field[type="date"] {
+    color-scheme: dark;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1200px) {
+    .edw-consultation-grid {
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .edw-consultation-wrapper {
+        height: auto;
+        min-height: 100vh;
+        padding: 3rem 2rem;
+    }
+
+    .edw-consultation-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .edw-consultation-info-block {
+        text-align: center;
+    }
+
+    .edw-info-subheading {
+        max-width: 100%;
+    }
+
+    .edw-consultation-form-block {
+        max-height: none;
+        height: auto;
+    }
+
+    .edw-option-cards-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .edw-landing-hero,
+    .edw-consultation-wrapper {
+        padding: 2rem 1.5rem;
+    }
+
+    .edw-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .edw-consultation-form-block {
+        padding: 2rem 1.5rem;
+    }
+
+    .edw-wizard-steps-track {
+        padding: 0;
+    }
+
+    .edw-wizard-bg-rail {
+        left: 15%;
+        right: 15%;
+    }
+
+    .edw-wizard-step-title {
+        font-size: 0.7rem;
+    }
+
+    .edw-field-row {
+        grid-template-columns: 1fr;
+    }
+
+    .edw-wizard-nav-bar {
+        flex-direction: column-reverse;
+    }
+
+    .edw-scroll-indicator {
+        bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .edw-consultation-form-block {
+        padding: 1.5rem 1rem;
+    }
+
+    .edw-wizard-step-circle {
+        width: 36px;
+        height: 36px;
+        font-size: 0.85rem;
+    }
+}
+
+@keyframes slideDown {
+    from { transform: translateX(-50%) translateY(-100%); opacity: 0; }
+    to { transform: translateX(-50%) translateY(0); opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateX(-50%) translateY(0); opacity: 1; }
+    to { transform: translateX(-50%) translateY(-100%); opacity: 0; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+/* ============================================
+   FOOTER ANIMATIONS (from main)
+   ============================================ */
+@keyframes gridMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(50px, -50px) scale(1.1); }
+}
+
+footer a:hover {
+    color: #FFD700 !important;
+    transform: translateX(5px);
+}
+
+footer .social-link:hover {
+    transform: translateY(-5px) scale(1.1);
+    border-color: #FFD700;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #000;
+    box-shadow: 0 10px 40px rgba(255, 215, 0, 0.6);
+}
+
+footer a[href^="tel"]:hover,
+footer a[href^="mailto"]:hover {
+    color: #FFD700 !important;
+    transform: translateX(5px);
+}
+
+@media (max-width: 1024px) {
+    footer > div > div:first-child {
+        grid-template-columns: 1fr !important;
+        gap: 3rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    footer > div {
+        padding: 5rem 1.5rem 2rem !important;
+    }
+    
+    footer > div > div:first-child {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+</style>
+</head>
+<body>
+
+        <!-- Animated Background -->
+    <div class="bg-container">
+        <div class="grid-bg"></div>
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Navigation (Copied from main site) -->
+    <nav class="main-nav" id="navbar">
+        <div class="logo">
+            <img src="logo.svg" alt="ElitesDev Logo" style="height: 55px; width: auto;">
+        </div>
+
+        <div class="nav-pill">
+            <ul class="nav-menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li class="has-dropdown">
+                    <a href="services.html" class="active">Services</a>
+                    <ul class="dropdown">
+                        <li><a href="services.html">Branding & Marketing</a></li>
+                        <li><a href="services.html">Web Development</a></li>
+                        <li><a href="services.html">Strategy Consulting</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#">Pages</a>
+                    <ul class="dropdown">
+                        <li><a href="index.html#projects">Projects</a></li>
+                        <li><a href="index.html#testimonials">Testimonials</a></li>
+                        <li><a href="index.html#faq">FAQs</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#booking">Book Service</a></li>
+            </ul>
+
+            <div class="nav-buttons">
+                <button class="btn btn-talk" onclick="window.location.href='booking.html'">Let's Talk</button>
+                <button class="btn btn-get" onclick="window.location.href='services.html'">Get Started</button>
+            </div>
+        </div>
+    </nav>
+
+
+<!-- ============================================
+     LANDING HERO
+     ============================================ -->
+<section class="edw-landing-hero">
+    <div class="edw-hero-bg">
+        <div class="edw-hero-bg-image"></div>
+        <div class="edw-grid-overlay"></div>
+        <div class="edw-floating-element edw-float-1"></div>
+        <div class="edw-floating-element edw-float-2"></div>
+        <div class="edw-floating-element edw-float-3"></div>
+    </div>
+
+    <div class="edw-hero-content">
+        <div class="edw-hero-badge">
+            <span class="edw-badge-pulse"></span>
+            <span class="edw-badge-text">Your Vision, Our Expertise</span>
+        </div>
+
+        <h1 class="edw-hero-title">
+            <span class="edw-title-line">Let's Talk About</span>
+            <span class="edw-title-line edw-gradient-text">Your Project</span>
+        </h1>
+
+        <p class="edw-hero-subtitle">
+            Transform your digital vision into reality. Share your ideas with us and let's create something extraordinary together.
+        </p>
+    </div>
+
+    <div class="edw-scroll-indicator">
+        <span class="edw-scroll-text">Scroll to Begin</span>
+        <div class="edw-scroll-line"></div>
+    </div>
+</section>
+
+<!-- ============================================
+     TWO-COLUMN BOOKING SECTION
+     ============================================ -->
+<section class="edw-consultation-wrapper">
+    <div class="edw-consultation-backdrop"></div>
+
+    <div class="edw-consultation-inner">
+        <div class="edw-consultation-grid">
+            
+            <!-- LEFT COLUMN: Minimal Info -->
+            <div class="edw-consultation-info-block">
+                <span class="edw-info-badge">Book Consultation</span>
+                <h2 class="edw-info-heading">
+                    Schedule Your <span class="edw-gradient-text">Free Consultation</span>
+                </h2>
+                <p class="edw-info-subheading">
+                    Fill in the details below and we'll get back to you within 24 hours
+                </p>
+            </div>
+
+            <!-- RIGHT COLUMN: Booking Form -->
+            <div class="edw-consultation-form-block">
+                <!-- Progress Steps -->
+                <div class="edw-wizard-progress-wrap">
+                    <div class="edw-wizard-steps-track">
+                        <div class="edw-wizard-bg-rail">
+                            <div class="edw-wizard-active-rail" id="edw-wizardProgressBar"></div>
+                        </div>
+                        
+                        <div class="edw-wizard-step-item edw-is-active" data-wizard-step="1">
+                            <div class="edw-wizard-step-circle">1</div>
+                            <div class="edw-wizard-step-title">Service</div>
+                        </div>
+                        
+                        <div class="edw-wizard-step-item" data-wizard-step="2">
+                            <div class="edw-wizard-step-circle">2</div>
+                            <div class="edw-wizard-step-title">Details</div>
+                        </div>
+                        
+                        <div class="edw-wizard-step-item" data-wizard-step="3">
+                            <div class="edw-wizard-step-circle">3</div>
+                            <div class="edw-wizard-step-title">Schedule</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Content -->
+                <form id="edw-consultationWizardForm" class="edw-wizard-form-area">
+                    <!-- Step 1: Service Selection -->
+                    <div class="edw-wizard-panel edw-is-visible" data-wizard-panel="1">
+                        <h3 class="edw-panel-heading">What service interests you?</h3>
+                        <p class="edw-panel-subtext">Choose the service that best fits your needs</p>
+
+                        <div class="edw-wizard-panel-content">
+                            <div class="edw-option-cards-row">
+                                <label class="edw-option-card-label">
+                                    <input type="radio" name="selectedService" value="branding" required>
+                                    <span class="edw-option-emoji">🎨</span>
+                                    <div class="edw-option-text-group">
+                                        <h4 class="edw-option-name-text">Branding</h4>
+                                        <p class="edw-option-desc-text">Brand identity & marketing</p>
+                                    </div>
+                                    <div class="edw-option-check-icon">
+                                        <svg viewBox="0 0 24 24" fill="none">
+                                            <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </label>
+
+                                <label class="edw-option-card-label">
+                                    <input type="radio" name="selectedService" value="webdev" required>
+                                    <span class="edw-option-emoji">💻</span>
+                                    <div class="edw-option-text-group">
+                                        <h4 class="edw-option-name-text">Web Development</h4>
+                                        <p class="edw-option-desc-text">Custom websites & apps</p>
+                                    </div>
+                                    <div class="edw-option-check-icon">
+                                        <svg viewBox="0 0 24 24" fill="none">
+                                            <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </label>
+
+                                <label class="edw-option-card-label">
+                                    <input type="radio" name="selectedService" value="marketing" required>
+                                    <span class="edw-option-emoji">📊</span>
+                                    <div class="edw-option-text-group">
+                                        <h4 class="edw-option-name-text">Digital Marketing</h4>
+                                        <p class="edw-option-desc-text">SEO & social media</p>
+                                    </div>
+                                    <div class="edw-option-check-icon">
+                                        <svg viewBox="0 0 24 24" fill="none">
+                                            <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="edw-wizard-nav-bar">
+                            <button type="button" class="edw-wizard-btn edw-wizard-btn-main" onclick="advanceWizard(1)">
+                                <span>Continue</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Personal Details -->
+                    <div class="edw-wizard-panel" data-wizard-panel="2">
+                        <h3 class="edw-panel-heading">Tell us about yourself</h3>
+                        <p class="edw-panel-subtext">We need some basic information to get started</p>
+
+                        <div class="edw-wizard-panel-content">
+                            <div class="edw-field-row">
+                                <div class="edw-input-wrapper">
+                                    <label class="edw-input-tag">
+                                        Full Name<span class="edw-asterisk">*</span>
+                                    </label>
+                                    <input type="text" name="clientFullName" class="edw-text-field" placeholder="John Doe" required>
+                                </div>
+
+                                <div class="edw-input-wrapper">
+                                    <label class="edw-input-tag">
+                                        Email Address<span class="edw-asterisk">*</span>
+                                    </label>
+                                    <input type="email" name="clientEmail" class="edw-text-field" placeholder="john@example.com" required>
+                                </div>
+
+                                <div class="edw-input-wrapper">
+                                    <label class="edw-input-tag">
+                                        Phone Number
+                                    </label>
+                                    <input type="tel" name="clientPhone" class="edw-text-field" placeholder="+1 234 567 8900">
+                                </div>
+
+                                <div class="edw-input-wrapper">
+                                    <label class="edw-input-tag">
+                                        Company Name
+                                    </label>
+                                    <input type="text" name="clientCompany" class="edw-text-field" placeholder="Your Company">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="edw-wizard-nav-bar">
+                            <button type="button" class="edw-wizard-btn edw-wizard-btn-alt" onclick="reverseWizard(2)">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                                </svg>
+                                <span>Back</span>
+                            </button>
+                            <button type="button" class="edw-wizard-btn edw-wizard-btn-main" onclick="advanceWizard(2)">
+                                <span>Continue</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Schedule & Message -->
+                    <div class="edw-wizard-panel" data-wizard-panel="3">
+                        <h3 class="edw-panel-heading">When should we connect?</h3>
+                        <p class="edw-panel-subtext">Pick a convenient time and share your project details</p>
+
+                        <div class="edw-wizard-panel-content">
+                            <div class="edw-field-row">
+                                <div class="edw-input-wrapper">
+                                    <label class="edw-input-tag">
+                                        Preferred Call Date<span class="edw-asterisk">*</span>
+                                    </label>
+                                    <input type="date" name="preferredCallDate" class="edw-text-field" required>
+                                </div>
+
+                                <div class="edw-input-wrapper">
+                                    <label class="edw-input-tag">
+                                        Preferred Time
+                                    </label>
+                                    <select name="preferredCallTime" class="edw-dropdown-field">
+                                        <option value="">Select a time slot</option>
+                                        <option value="morning">Morning (9 AM - 12 PM)</option>
+                                        <option value="afternoon">Afternoon (12 PM - 4 PM)</option>
+                                        <option value="evening">Evening (4 PM - 7 PM)</option>
+                                    </select>
+                                </div>
+
+                                <div class="edw-input-wrapper edw-span-full">
+                                    <label class="edw-input-tag">
+                                        Tell us about your project<span class="edw-asterisk">*</span>
+                                    </label>
+                                    <textarea name="projectMessage" class="edw-text-area-field" placeholder="Share your vision, goals, and any specific requirements..." required></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="edw-wizard-nav-bar">
+                            <button type="button" class="edw-wizard-btn edw-wizard-btn-alt" onclick="reverseWizard(3)">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                                </svg>
+                                <span>Back</span>
+                            </button>
+                            <button type="submit" class="edw-wizard-btn edw-wizard-btn-main">
+                                <span>Book Consultation</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+            <!-- ==========  ELITESDEV – FULL TESTIMONIALS SECTION  ========== -->
+
+<!-- NEW TESTIMONIALS SECTION - Replace existing testimonials section -->
+<section id="testimonials" class="testimonials-modern scroll-fade">
+    <!-- Animated background -->
+    <div class="testimonials-bg">
+        <div class="testimonials-orb testimonials-orb-1"></div>
+        <div class="testimonials-orb testimonials-orb-2"></div>
+        <div class="testimonials-orb testimonials-orb-3"></div>
+    </div>
+    
+    <div class="testimonials-header">
+        <span class="section-label">What Our Clients Say</span>
+        <h2 class="section-title">We're more than just executors — <span class="gradient-text">we're your creative partners</span></h2>
+        <p class="section-subtitle">Don't just take our word for it, see what clients have to say about working with us.</p>
+        
+        <!-- Clutch Rating -->
+        <div class="clutch-badge">
+            <img src="https://cdn.prod.website-files.com/5f5e5f5e5f5e5f5e5f5e5f5e/clutch-logo.svg" alt="Clutch" style="height: 24px; filter: brightness(0) invert(1);" onerror="this.style.display='none'">
+            <div class="clutch-rating">
+                <span class="clutch-score">4.9/5.0</span>
+                <div class="clutch-stars">★★★★★</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonials-slider-wrapper">
+        <button class="testimonials-nav testimonials-nav-prev" id="testimonialsNavPrev">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </button>
+        
+        <div class="testimonials-track-container" id="testimonialsTrackContainer">
+            <div class="testimonials-track" id="testimonialsTrack">
+                <!-- Card 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-card-header">
+                        <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="Client" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Sanidhya</h4>
+                            <p class="testimonial-role">CEO at <span class="company-highlight">TechStart</span></p>
+                        </div>
+                        <div class="testimonial-logo">
+                            <svg width="80" height="24" viewBox="0 0 80 24" fill="currentColor" opacity="0.4">
+                                <text x="0" y="18" font-family="Arial" font-weight="bold" font-size="16">ENVATO</text>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">Chandan and his team have been managing our multiple social media accounts and website projects for several clients. Their work quality is consistently amazing.</p>
+                    <a href="#booking" class="testimonial-link">
+                        <span>Project Page</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-card-header">
+                        <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Client" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Udit Singh</h4>
+                            <p class="testimonial-role">Marketing Director at <span class="company-highlight">GrowthHub</span></p>
+                        </div>
+                        <div class="testimonial-logo">
+                            <svg width="80" height="24" viewBox="0 0 80 24" fill="currentColor" opacity="0.4">
+                                <circle cx="12" cy="12" r="8"/><circle cx="32" cy="12" r="8"/><circle cx="52" cy="12" r="8"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">The project exceeded our expectations! Chandan and his team delivered exceptional results on time and maintained excellent communication throughout.</p>
+                    <a href="#booking" class="testimonial-link">
+                        <span>Project Page</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-card-header">
+                        <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Client" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Suhas</h4>
+                            <p class="testimonial-role">Founder at <span class="company-highlight">Innovate Labs</span></p>
+                        </div>
+                        <div class="testimonial-logo">
+                            <svg width="80" height="24" viewBox="0 0 80 24" fill="currentColor" opacity="0.4">
+                                <rect x="0" y="4" width="16" height="16" rx="3"/>
+                                <rect x="20" y="8" width="12" height="8" rx="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">Working with ElitesDev was an exceptional experience from start to finish. Truly proud to have worked with such a talented team.</p>
+                    <a href="#booking" class="testimonial-link">
+                        <span>Project Page</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-card-header">
+                        <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="Client" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Joseph</h4>
+                            <p class="testimonial-role">Product Manager at <span class="company-highlight">Digital Flow</span></p>
+                        </div>
+                        <div class="testimonial-logo">
+                            <svg width="80" height="24" viewBox="0 0 80 24" fill="currentColor" opacity="0.4">
+                                <path d="M12 2L2 12L12 22M12 12H22"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">They delivered our e-commerce platform on schedule with all requested features. The ongoing support is excellent.</p>
+                    <a href="#booking" class="testimonial-link">
+                        <span>Project Page</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <!-- Card 5 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-card-header">
+                        <img src="https://randomuser.me/api/portraits/men/60.jpg" alt="Client" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Aneesh</h4>
+                            <p class="testimonial-role">CTO at <span class="company-highlight">CloudStack</span></p>
+                        </div>
+                        <div class="testimonial-logo">
+                            <svg width="80" height="24" viewBox="0 0 80 24" fill="currentColor" opacity="0.4">
+                                <circle cx="12" cy="12" r="10"/><path d="M12 6V18M6 12H18"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">The team at ElitesDev is simply fantastic! Their attention to detail and responsive communication made the process stress-free.</p>
+                    <a href="#booking" class="testimonial-link">
+                        <span>Project Page</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <!-- Card 6 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-card-header">
+                        <img src="https://randomuser.me/api/portraits/men/70.jpg" alt="Client" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Amit Jain</h4>
+                            <p class="testimonial-role">Business Owner at <span class="company-highlight">RetailPro</span></p>
+                        </div>
+                        <div class="testimonial-logo">
+                            <svg width="80" height="24" viewBox="0 0 80 24" fill="currentColor" opacity="0.4">
+                                <rect width="24" height="24" rx="4"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">★★★★☆</div>
+                    <p class="testimonial-text">ElitesDev transformed our business website beautifully. Their technical and creative balance is remarkable.</p>
+                    <a href="#booking" class="testimonial-link">
+                        <span>Project Page</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <button class="testimonials-nav testimonials-nav-next" id="testimonialsNavNext">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </button>
+    </div>
+    
+    <!-- Progress dots -->
+    <div class="testimonials-dots" id="testimonialsDots"></div>
+</section>
+
+
+<!-- REVOLUTIONARY FOOTER -->
+<footer style="position: relative; overflow: hidden; background: #000; border-top: none; padding: 8rem 2rem 2rem;">
+    <!-- Animated Background -->
+    <div style="position: absolute; inset: 0; pointer-events: none; z-index: 0;">
+        <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255, 215, 0, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 215, 0, 0.02) 1px, transparent 1px); background-size: 50px 50px; animation: gridMove 30s linear infinite;"></div>
+        <div style="position: absolute; width: 500px; height: 500px; background: linear-gradient(135deg, #FFD700, #FFA500); border-radius: 50%; filter: blur(120px); opacity: 0.15; top: -20%; left: -10%; animation: float 25s ease-in-out infinite;"></div>
+        <div style="position: absolute; width: 400px; height: 400px; background: linear-gradient(135deg, #00D4FF, #0099FF); border-radius: 50%; filter: blur(120px); opacity: 0.15; bottom: -20%; right: -10%; animation: float 25s ease-in-out infinite; animation-delay: 10s;"></div>
+    </div>
+
+    <div style="max-width: 1400px; margin: 0 auto; position: relative; z-index: 1;">
+        <!-- Links Grid -->
+        <div style="display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 5rem;">
+            <!-- Company Info -->
+            <div>
+                <div style="font-size: 2.5rem; font-weight: 900; margin-bottom: 1.5rem; display: flex; gap: 2px;">
+                    <img src="logo.svg" alt="ElitesDev Logo" style="height: 65px; width: auto;">
+                </div>
+                <p style="color: rgba(255, 255, 255, 0.7); line-height: 1.7; margin-bottom: 2rem; font-size: 0.95rem;">Creating digital experiences that drive growth and deliver measurable results. Your success is our passion.</p>
+                
+                <!-- Social Links with Glow Effect -->
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="#" style="width: 48px; height: 48px; background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 165, 0, 0.05)); backdrop-filter: blur(20px); border: 2px solid rgba(255, 215, 0, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #FFD700; text-decoration: none; font-size: 1.2rem; transition: all 0.3s; box-shadow: 0 5px 20px rgba(255, 215, 0, 0.2);">𝕏</a>
+                    <a href="#" style="width: 48px; height: 48px; background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 165, 0, 0.05)); backdrop-filter: blur(20px); border: 2px solid rgba(255, 215, 0, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #FFD700; text-decoration: none; font-size: 1.2rem; transition: all 0.3s; box-shadow: 0 5px 20px rgba(255, 215, 0, 0.2);">in</a>
+                    <a href="#" style="width: 48px; height: 48px; background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 165, 0, 0.05)); backdrop-filter: blur(20px); border: 2px solid rgba(255, 215, 0, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #FFD700; text-decoration: none; font-size: 1.2rem; transition: all 0.3s; box-shadow: 0 5px 20px rgba(255, 215, 0, 0.2);">📷</a>
+                    <a href="#" style="width: 48px; height: 48px; background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 165, 0, 0.05)); backdrop-filter: blur(20px); border: 2px solid rgba(255, 215, 0, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #FFD700; text-decoration: none; font-size: 1.2rem; transition: all 0.3s; box-shadow: 0 5px 20px rgba(255, 215, 0, 0.2);">▶</a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem; color: #fff; position: relative; padding-bottom: 0.75rem;">
+                    Quick Links
+                    <span style="position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background: linear-gradient(90deg, #FFD700, #FFA500); border-radius: 2px;"></span>
+                </h4>
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <a href="index.html#home" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> Home
+                    </a>
+                    <a href="index.html#about" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> About Us
+                    </a>
+                    <a href="services.html" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> Services
+                    </a>
+                    <a href="index.html#projects" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> Portfolio
+                    </a>
+                </div>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem; color: #fff; position: relative; padding-bottom: 0.75rem;">
+                    Services
+                    <span style="position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background: linear-gradient(90deg, #FFD700, #FFA500); border-radius: 2px;"></span>
+                </h4>
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <a href="#branding" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> Branding
+                    </a>
+                    <a href="#webdev" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> Web Development
+                    </a>
+                    <a href="#strategy" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> Strategy
+                    </a>
+                    <a href="index.html#booking" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> Contact
+                    </a>
+                </div>
+            </div>
+
+            <!-- Company -->
+            <div>
+                <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem; color: #fff; position: relative; padding-bottom: 0.75rem;">
+                    Company
+                    <span style="position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background: linear-gradient(90deg, #FFD700, #FFA500); border-radius: 2px;"></span>
+                </h4>
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <a href="index.html#about" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> Our Story
+                    </a>
+                    <a href="index.html#testimonials" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> Testimonials
+                    </a>
+                    <a href="index.html#faq" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> FAQs
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem; color: #fff; position: relative; padding-bottom: 0.75rem;">
+                    Contact
+                    <span style="position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background: linear-gradient(90deg, #FFD700, #FFA500); border-radius: 2px;"></span>
+                </h4>
+                <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                    <a href="tel:+917757907676" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700; font-size: 1.2rem;">📞</span>
+                        <span>+91 77579 07676</span>
+                    </a>
+                    <a href="mailto:contact@elitesdev.com" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700; font-size: 1.2rem;">✉️</span>
+                        <span>contact@elitesdev.com</span>
+                    </a>
+                    <a href="#location" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700; font-size: 1.2rem;">📍</span>
+                        <span>Chennai, Tamil Nadu, India</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div style="padding-top: 3rem; border-top: 1px solid rgba(255, 215, 0, 0.2); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
+            <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.95rem; margin: 0;">
+                &copy; 2025 ElitesDev. All Rights Reserved. 
+                <span style="color: #FFD700; font-weight: 600;">Crafted with ❤️</span>
+            </p>
+            <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                <a href="#privacy" style="color: rgba(255, 255, 255, 0.6); text-decoration: none; font-size: 0.95rem; transition: color 0.3s;">Privacy Policy</a>
+                <a href="#terms" style="color: rgba(255, 255, 255, 0.6); text-decoration: none; font-size: 0.95rem; transition: color 0.3s;">Terms of Service</a>
+                <a href="#cookies" style="color: rgba(255, 255, 255, 0.6); text-decoration: none; font-size: 0.95rem; transition: color 0.3s;">Cookie Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="https://unpkg.com/@studio-freight/lenis@1/dist/lenis.min.js"></script>
+
+<script>
+
+/* ========================================
+   LENIS SMOOTH SCROLL WITH FORM SUPPORT
+   ======================================== */
+
+const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    direction: 'vertical',
+    smooth: true,
+    mouseMultiplier: 1,
+    touchMultiplier: 2,
+});
+
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
+/* ========================================
+   CUSTOM CURSOR (EXACT FROM MAIN PAGE)
+   ======================================== */
+(function() {
+    'use strict';
+    
+    // Don't initialize on touch devices
+    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+        return;
+    }
+    
+    // Create main cursor
+    const cursor = document.createElement('div');
+    cursor.className = 'custom-cursor';
+    document.body.appendChild(cursor);
+    
+    // Create trail particles
+    const trailCount = 6;
+    const trails = [];
+    
+    for (let i = 0; i < trailCount; i++) {
+        const trail = document.createElement('div');
+        trail.className = 'custom-cursor-trail';
+        trail.style.opacity = (1 - (i / trailCount)) * 0.6;
+        document.body.appendChild(trail);
+        trails.push({
+            element: trail,
+            x: 0,
+            y: 0
+        });
+    }
+    
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+    let cursorX = mouseX;
+    let cursorY = mouseY;
+    
+    // Update mouse position
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+    
+    // Smooth animation
+    function animateCursor() {
+        const dx = mouseX - cursorX;
+        const dy = mouseY - cursorY;
+        
+        cursorX += dx * 0.2;
+        cursorY += dy * 0.2;
+        
+        cursor.style.left = cursorX + 'px';
+        cursor.style.top = cursorY + 'px';
+        
+        // Animate trails with progressive delay
+        trails.forEach((trail, index) => {
+            const delay = (index + 1) * 0.05;
+            trail.x += (cursorX - trail.x) * (0.15 - delay);
+            trail.y += (cursorY - trail.y) * (0.15 - delay);
+            
+            trail.element.style.left = trail.x + 'px';
+            trail.element.style.top = trail.y + 'px';
+        });
+        
+        requestAnimationFrame(animateCursor);
+    }
+    
+    animateCursor();
+    
+    // Hover effects for clickable elements
+    const clickableElements = 'a, button, .btn, .service-card, .testimonial-card, .faq-card, .project-slide, .nav-menu a, .social-link, [role="button"], [onclick], .menu-btn, .cta-btn, .service-slide-btn, .category-btn';
+    
+    document.addEventListener('mouseover', (e) => {
+        if (e.target.closest(clickableElements)) {
+            cursor.classList.add('hover');
+            trails.forEach(trail => trail.element.style.opacity = '0');
+        }
+    });
+    
+    document.addEventListener('mouseout', (e) => {
+        if (e.target.closest(clickableElements)) {
+            cursor.classList.remove('hover');
+            trails.forEach((trail, index) => {
+                trail.element.style.opacity = (1 - (index / trailCount)) * 0.6;
+            });
+        }
+    });
+    
+    // Text input hover
+    const textInputs = 'input[type="text"], input[type="email"], input[type="tel"], textarea';
+    
+    document.addEventListener('mouseover', (e) => {
+        if (e.target.matches(textInputs)) {
+            cursor.classList.add('text-hover');
+            trails.forEach(trail => trail.element.style.opacity = '0');
+        }
+    });
+    
+    document.addEventListener('mouseout', (e) => {
+        if (e.target.matches(textInputs)) {
+            cursor.classList.remove('text-hover');
+            trails.forEach((trail, index) => {
+                trail.element.style.opacity = (1 - (index / trailCount)) * 0.6;
+            });
+        }
+    });
+    
+    // Click effect
+    document.addEventListener('mousedown', () => {
+        cursor.classList.add('click');
+    });
+    
+    document.addEventListener('mouseup', () => {
+        cursor.classList.remove('click');
+    });
+    
+    // Hide when leaving window
+    document.addEventListener('mouseleave', () => {
+        cursor.style.opacity = '0';
+        trails.forEach(trail => trail.element.style.opacity = '0');
+    });
+    
+    document.addEventListener('mouseenter', () => {
+        cursor.style.opacity = '1';
+        trails.forEach((trail, index) => {
+            trail.element.style.opacity = (1 - (index / trailCount)) * 0.6;
+        });
+    });
+    
+    console.log('%c✨ Custom Cursor Active!', 'background: linear-gradient(135deg, #FFD700, #FFA500); color: black; font-size: 14px; padding: 6px; font-weight: bold;');
+})();
+
+/* ========================================
+   NAVIGATION HIDE ON SCROLL
+   ======================================== */
+const nav = document.querySelector('.main-nav');
+const categoryNav = document.getElementById('categoryNav');
+let lastScrollY = 0;
+
+window.addEventListener('scroll', () => {
+    const currentScrollY = window.pageYOffset;
+    
+    if (currentScrollY > lastScrollY && currentScrollY > 200) {
+        if (nav) nav.style.transform = 'translate(-50%, -150%)';
+    } else {
+        if (nav) nav.style.transform = 'translate(-50%, 0)';
+    }
+    
+    lastScrollY = currentScrollY;
+}, { passive: true });
+
+
+// ============================================
+// WIZARD FORM NAVIGATION
+// ============================================
+let wizardCurrentStep = 1;
+const wizardTotalSteps = 3;
+
+function refreshWizardProgress() {
+    const progressBar = document.getElementById('edw-wizardProgressBar');
+    const progressPercent = ((wizardCurrentStep - 1) / (wizardTotalSteps - 1)) * 100;
+    progressBar.style.width = progressPercent + '%';
+
+    document.querySelectorAll('.edw-wizard-step-item').forEach((stepItem, idx) => {
+        const stepNumber = idx + 1;
+        const stepCircle = stepItem.querySelector('.edw-wizard-step-circle');
+        
+        stepItem.classList.remove('edw-is-active', 'edw-is-done');
+        
+        if (stepNumber < wizardCurrentStep) {
+            stepItem.classList.add('edw-is-done');
+            stepCircle.innerHTML = '✓';
+        } else if (stepNumber === wizardCurrentStep) {
+            stepItem.classList.add('edw-is-active');
+            stepCircle.innerHTML = stepNumber;
+        } else {
+            stepCircle.innerHTML = stepNumber;
+        }
+    });
+}
+
+function displayWizardStep(stepNum) {
+    document.querySelectorAll('.edw-wizard-panel').forEach(panel => panel.classList.remove('edw-is-visible'));
+    document.querySelector(`.edw-wizard-panel[data-wizard-panel="${stepNum}"]`).classList.add('edw-is-visible');
+    wizardCurrentStep = stepNum;
+    refreshWizardProgress();
+}
+
+function checkWizardStep(stepNum) {
+    const currentPanel = document.querySelector(`.edw-wizard-panel[data-wizard-panel="${stepNum}"]`);
+    const requiredInputs = currentPanel.querySelectorAll('[required]');
+    let allValid = true;
+
+    requiredInputs.forEach(input => {
+        if (input.type === 'radio') {
+            const radioGroup = currentPanel.querySelectorAll(`input[name="${input.name}"]`);
+            const anyChecked = Array.from(radioGroup).some(radio => radio.checked);
+            if (!anyChecked) {
+                allValid = false;
+            }
+        } else if (!input.value.trim()) {
+            allValid = false;
+            input.style.borderColor = 'rgba(239, 68, 68, 0.5)';
+            input.style.boxShadow = '0 0 0 4px rgba(239, 68, 68, 0.1)';
+            
+            setTimeout(() => {
+                input.style.borderColor = '';
+                input.style.boxShadow = '';
+            }, 2000);
+        }
+    });
+
+    return allValid;
+}
+
+function advanceWizard(stepNum) {
+    if (checkWizardStep(stepNum) && stepNum < wizardTotalSteps) {
+        displayWizardStep(stepNum + 1);
+    } else if (!checkWizardStep(stepNum)) {
+        const alert = document.createElement('div');
+        alert.textContent = 'Please fill in all required fields';
+        alert.style.cssText = `
+            position: fixed;
+            top: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.95), rgba(220, 38, 38, 0.95));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            z-index: 10000;
+            box-shadow: 0 10px 40px rgba(239, 68, 68, 0.4);
+            animation: slideDown 0.3s ease;
+        `;
+        document.body.appendChild(alert);
+        
+        setTimeout(() => {
+            alert.style.animation = 'slideUp 0.3s ease';
+            setTimeout(() => alert.remove(), 300);
+        }, 3000);
+    }
+}
+
+function reverseWizard(stepNum) {
+    if (stepNum > 1) {
+        displayWizardStep(stepNum - 1);
+    }
+}
+
+// Service card selection
+document.querySelectorAll('.edw-option-card-label').forEach(card => {
+    card.addEventListener('click', function(e) {
+        if (e.target.tagName !== 'INPUT') {
+            const radio = this.querySelector('input[type="radio"]');
+            radio.checked = true;
+            refreshServiceCards();
+        }
+    });
+    
+    const radio = card.querySelector('input[type="radio"]');
+    radio.addEventListener('change', refreshServiceCards);
+});
+
+function refreshServiceCards() {
+    document.querySelectorAll('.edw-option-card-label').forEach(card => {
+        card.classList.remove('edw-is-chosen');
+    });
+    
+    const checkedRadio = document.querySelector('.edw-option-card-label input[type="radio"]:checked');
+    if (checkedRadio) {
+        checkedRadio.closest('.edw-option-card-label').classList.add('edw-is-chosen');
+    }
+}
+
+// Set minimum date for call date (tomorrow)
+const dateField = document.querySelector('input[name="preferredCallDate"]');
+if (dateField) {
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    dateField.min = tomorrow.toISOString().split('T')[0];
+}
+
+// Replace the form submission script in booking.html with this:
+
+// Form submission with AJAX
+document.getElementById('edw-consultationWizardForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    if (!checkWizardStep(3)) {
+        return;
+    }
+    
+    const formData = new FormData(e.target);
+    const formDataObject = Object.fromEntries(formData);
+    
+    const submitButton = e.target.querySelector('button[type="submit"]');
+    const buttonLabel = submitButton.querySelector('span');
+    const originalLabel = buttonLabel.textContent;
+    
+    submitButton.disabled = true;
+    buttonLabel.textContent = 'Sending...';
+    submitButton.style.transform = 'scale(0.98)';
+    
+    try {
+        // Send to PHP backend
+        const response = await fetch('process_booking.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formDataObject)
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+            buttonLabel.textContent = 'Booked Successfully! ✓';
+            submitButton.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+            submitButton.style.transform = 'scale(1)';
+            
+            setTimeout(() => {
+                const successOverlay = document.createElement('div');
+                successOverlay.innerHTML = `
+                    <div style="
+                        position: fixed;
+                        inset: 0;
+                        background: rgba(0, 0, 0, 0.9);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        z-index: 10000;
+                        animation: fadeIn 0.3s ease;
+                    ">
+                        <div style="
+                            background: linear-gradient(135deg, rgba(26, 26, 46, 0.98), rgba(15, 15, 30, 0.98));
+                            border: 2px solid rgba(16, 185, 129, 0.5);
+                            border-radius: 24px;
+                            padding: 3rem;
+                            max-width: 500px;
+                            text-align: center;
+                            box-shadow: 0 30px 80px rgba(16, 185, 129, 0.3);
+                        ">
+                            <div style="
+                                width: 80px;
+                                height: 80px;
+                                background: linear-gradient(135deg, #10B981, #059669);
+                                border-radius: 50%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin: 0 auto 1.5rem;
+                                font-size: 2.5rem;
+                            ">✓</div>
+                            <h3 style="
+                                font-size: 2rem;
+                                font-weight: 900;
+                                margin-bottom: 1rem;
+                                color: #fff;
+                            ">Thank You!</h3>
+                            <p style="
+                                color: rgba(255, 255, 255, 0.7);
+                                font-size: 1.1rem;
+                                line-height: 1.6;
+                                margin-bottom: 0.5rem;
+                            ">${result.message}</p>
+                            ${result.bookingId ? `<p style="color: rgba(255, 255, 255, 0.5); font-size: 0.9rem; margin-bottom: 2rem;">Booking ID: #${result.bookingId}</p>` : ''}
+                            <button onclick="this.parentElement.parentElement.remove()" style="
+                                padding: 1rem 2rem;
+                                background: linear-gradient(135deg, #FFD700, #FFA500);
+                                border: none;
+                                border-radius: 12px;
+                                color: #000;
+                                font-weight: 700;
+                                font-size: 1rem;
+                                cursor: pointer;
+                                font-family: inherit;
+                            ">Close</button>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(successOverlay);
+                
+                e.target.reset();
+                displayWizardStep(1);
+                refreshServiceCards();
+                submitButton.disabled = false;
+                buttonLabel.textContent = originalLabel;
+                submitButton.style.background = 'linear-gradient(135deg, #FFD700, #FFA500)';
+            }, 1000);
+            
+        } else {
+            throw new Error(result.message || 'Submission failed');
+        }
+        
+    } catch (error) {
+        console.error('Submission error:', error);
+        
+        const errorMessage = error.message || 'Something went wrong. Please try again.';
+        
+        const errorAlert = document.createElement('div');
+        errorAlert.innerHTML = `
+            <div style="
+                position: fixed;
+                top: 2rem;
+                left: 50%;
+                transform: translateX(-50%);
+                background: linear-gradient(135deg, rgba(239, 68, 68, 0.95), rgba(220, 38, 38, 0.95));
+                color: white;
+                padding: 1.25rem 2rem;
+                border-radius: 12px;
+                font-weight: 600;
+                z-index: 10000;
+                box-shadow: 0 10px 40px rgba(239, 68, 68, 0.4);
+                animation: slideDown 0.3s ease;
+                max-width: 90%;
+                text-align: center;
+            ">
+                <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">⚠️</div>
+                <div>${errorMessage}</div>
+                <div style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.9;">Please contact us at +91 77579 07676</div>
+            </div>
+        `;
+        document.body.appendChild(errorAlert);
+        
+        setTimeout(() => {
+            errorAlert.style.animation = 'slideUp 0.3s ease';
+            setTimeout(() => errorAlert.remove(), 300);
+        }, 5000);
+        
+        buttonLabel.textContent = originalLabel;
+        submitButton.style.background = 'linear-gradient(135deg, #FFD700, #FFA500)';
+        submitButton.style.transform = 'scale(1)';
+        submitButton.disabled = false;
+    }
+});
+
+refreshWizardProgress();
+
+console.log('%c✨ ElitesDev Consultation Wizard Ready!', 
+    'background: linear-gradient(135deg, #FFD700, #FFA500); color: #000; font-size: 16px; padding: 12px 24px; font-weight: bold; border-radius: 8px;');
+</script>
+
+</body>
+</html>

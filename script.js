@@ -1,9 +1,7 @@
-
 /* ========================================
    LOAD LENIS LIBRARY FIRST (EXTERNAL)
    ======================================== */
-// Add this line in your HTML BEFORE the main script tag:
-// <script src="https://unpkg.com/@studio-freight/lenis@1/dist/lenis.min.js"></script>
+// <script src="https://unpkg.com/@studio-freight/lenis@1/dist/lenis.min.js">
 
 
 /* ========================================
@@ -192,24 +190,6 @@ if (navbar) {
     });
 }
 
-// Menu button toggle
-const menuBtn = document.getElementById('menuBtn');
-const menuDropdown = document.getElementById('menuDropdown');
-
-if (menuBtn && menuDropdown) {
-    menuBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        menuDropdown.style.display = menuDropdown.style.display === 'flex' ? 'none' : 'flex';
-        menuBtn.classList.toggle('open');
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!menuBtn.contains(e.target)) {
-            menuDropdown.style.display = 'none';
-            menuBtn.classList.remove('open');
-        }
-    });
-}
 
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1192,149 +1172,9 @@ console.log('%c❓ FAQ Section Enhanced!', 'background: linear-gradient(135deg, 
 
 
 /* ========================================
-   13. BOOKING FORM SECTION
-   ======================================== */
-(function() {
-    const form = document.getElementById('bookingFormRedesigned');
-    const textarea = document.getElementById('message');
-    const charCount = document.getElementById('charCount');
-    const submitBtn = form?.querySelector('.submit-btn-redesigned');
-    
-    if (!form) return;
-    
-    // Character counter
-    if (textarea && charCount) {
-        textarea.addEventListener('input', () => {
-            const length = textarea.value.length;
-            charCount.textContent = length;
-            
-            const counter = charCount.parentElement;
-            counter.classList.remove('warning', 'limit');
-            
-            if (length > 400) {
-                counter.classList.add('warning');
-            }
-            if (length >= 500) {
-                counter.classList.add('limit');
-                textarea.value = textarea.value.substring(0, 500);
-                charCount.textContent = 500;
-            }
-        });
-    }
-    
-    // Form field animations
-    const formInputs = form.querySelectorAll('.form-input, .form-textarea');
-    formInputs.forEach(input => {
-        input.addEventListener('focus', () => {
-            input.parentElement.style.transform = 'translateY(-2px)';
-        });
-        
-        input.addEventListener('blur', () => {
-            input.parentElement.style.transform = 'translateY(0)';
-        });
-    });
-    
-    // Form submission
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
-        if (!submitBtn) return;
-        
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData);
-        
-        if (!data.fullName || !data.email || !data.service || !data.message) {
-            alert('Please fill in all required fields');
-            return;
-        }
-        
-        submitBtn.disabled = true;
-        const originalText = submitBtn.querySelector('.btn-text').textContent;
-        submitBtn.querySelector('.btn-text').textContent = 'Sending...';
-        submitBtn.style.transform = 'scale(0.98)';
-        
-        try {
-            await new Promise(resolve => setTimeout(resolve, 2000));
-            
-            console.log('Form submitted:', data);
-            
-            submitBtn.querySelector('.btn-text').textContent = 'Sent! ✓';
-            submitBtn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
-            
-            setTimeout(() => {
-                form.reset();
-                if (charCount) charCount.textContent = '0';
-                submitBtn.disabled = false;
-                submitBtn.querySelector('.btn-text').textContent = originalText;
-                submitBtn.style.background = 'linear-gradient(135deg, #FFD700, #FFA500)';
-                submitBtn.style.transform = 'scale(1)';
-            }, 3000);
-            
-        } catch (error) {
-            submitBtn.querySelector('.btn-text').textContent = 'Error';
-            submitBtn.style.background = 'linear-gradient(135deg, #EF4444, #DC2626)';
-            
-            setTimeout(() => {
-                submitBtn.disabled = false;
-                submitBtn.querySelector('.btn-text').textContent = originalText;
-                submitBtn.style.background = 'linear-gradient(135deg, #FFD700, #FFA500)';
-                submitBtn.style.transform = 'scale(1)';
-            }, 3000);
-        }
-    });
-    
-    // Animate form on scroll
-    const formWrapper = document.querySelector('.booking-form-wrapper');
-    const formObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '0';
-                entry.target.style.transform = 'translateY(30px)';
-                setTimeout(() => {
-                    entry.target.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }, 100);
-                formObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.2 });
-    
-    if (formWrapper) {
-        formObserver.observe(formWrapper);
-    }
-    
-    console.log('%c📝 Booking Form Enhanced!', 'background: linear-gradient(135deg, #FFD700, #FFA500); color: black; font-size: 14px; padding: 6px; font-weight: bold;');
-})();
-
-
-/* ========================================
    14. FOOTER SECTION
    ======================================== */
-// Newsletter subscription
-const newsletterBtn = document.querySelector('footer button');
-const newsletterInput = document.querySelector('footer input[type="email"]');
 
-if (newsletterBtn && newsletterInput) {
-    newsletterBtn.addEventListener('click', () => {
-        const email = newsletterInput.value;
-        if (email && email.includes('@')) {
-            newsletterBtn.textContent = 'Subscribed! ✓';
-            newsletterBtn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
-            newsletterInput.value = '';
-            
-            setTimeout(() => {
-                newsletterBtn.textContent = 'Subscribe';
-                newsletterBtn.style.background = 'linear-gradient(135deg, #FFD700, #FFA500)';
-            }, 3000);
-        } else {
-            newsletterInput.style.borderColor = '#EF4444';
-            setTimeout(() => {
-                newsletterInput.style.borderColor = 'rgba(255, 215, 0, 0.3)';
-            }, 1000);
-        }
-    });
-}
 
 // Footer scroll animation
 document.addEventListener('DOMContentLoaded', () => {
@@ -1363,4 +1203,3 @@ document.addEventListener('DOMContentLoaded', () => {
    ======================================== */
 console.log('%c🚀 Welcome to ElitesDev!', 'background: linear-gradient(135deg, #FFD700, #FFA500); color: black; font-size: 20px; padding: 10px; font-weight: bold;');
 console.log('%c✨ We build amazing digital experiences!', 'color: #FFD700; font-size: 14px;');
-

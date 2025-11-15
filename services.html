@@ -1,0 +1,1590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ElitesDev Services - Branding, Web Development & Strategy Consulting">
+<meta name="keywords" content="branding, web development, marketing, SEO, WordPress, Shopify, consulting">
+<meta name="author" content="ElitesDev">
+    <title>Our Services - ElitesDev</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollSmoother.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@studio-freight/lenis@1/dist/lenis.css">
+</head>
+<body>
+
+<style>
+
+    /* Hide all progress bars whenever footer is visible */
+.footer-in-view .services-progress {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateY(20px);
+}
+
+
+        .btn-talk { 
+            background: transparent;
+            border: 2px solid #040404;
+            color: #000; /* CHANGED FROM #FF6B00 */
+            font-weight: 800;
+        }
+        .btn-talk:hover { 
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            border: 2px solid #FFA500;
+            color: #000;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(255, 215, 0, 0.5);
+        }
+ /* ============================================
+   CUSTOM CURSOR (FROM MAIN PAGE)
+   ============================================ */
+body {
+    cursor: none;
+}
+
+a, button, .btn, .service-card, .testimonial-card, .faq-card, 
+.project-slide, .nav-menu a, .social-link, input, textarea, select,
+[role="button"], [onclick], .service-slide, .service-slide-btn, .category-btn {
+    cursor: none !important;
+}
+
+.custom-cursor {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: #FFD700;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+                background 0.2s ease,
+                opacity 0.2s ease;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+    transform: translate(-50%, -50%);
+}
+
+.custom-cursor-trail {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 215, 0, 0.5);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99998;
+    transition: opacity 0.3s ease;
+    transform: translate(-50%, -50%);
+}
+
+.custom-cursor.hover {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 215, 0, 0.1);
+    border: 2px solid #FFD700;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+}
+
+.custom-cursor.text-hover {
+    width: 2px;
+    height: 20px;
+    border-radius: 2px;
+    background: #FFD700;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+}
+
+.custom-cursor.click {
+    transform: translate(-50%, -50%) scale(0.7);
+}
+
+@media (hover: none) and (pointer: coarse) {
+    body {
+        cursor: auto;
+    }
+    
+    .custom-cursor,
+    .custom-cursor-trail {
+        display: none !important;
+    }
+}
+
+/* Services Hero Section - NEW */
+.services-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 140px 2rem 4rem;
+    background: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=2400&q=80') center/cover;
+    opacity: 0.08;
+    z-index: 0;
+}
+
+.services-hero-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.2;
+    animation: heroFloat 20s ease-in-out infinite;
+}
+
+.services-hero-shape-1 {
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    top: -10%;
+    left: -5%;
+}
+
+.services-hero-shape-2 {
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(135deg, #00D4FF, #0099FF);
+    bottom: -10%;
+    right: -5%;
+    animation-delay: 10s;
+}
+
+.services-hero-content {
+    max-width: 1000px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.services-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 165, 0, 0.1));
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    border-radius: 50px;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(20px);
+}
+
+.services-hero-title {
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    margin-bottom: 1.5rem;
+}
+
+.services-hero-desc {
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.75);
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+/* ============================================
+    SERVICES SECTION STYLES
+   ============================================ */
+.services-section {
+    padding: 6rem 2rem 8rem;
+    background: #000;
+    position: relative;
+}
+
+/* Service Tabs Container */
+.service-tabs-container {
+    max-width: 1400px;
+    margin: 0 auto 4rem;
+    position: relative;
+}
+
+.service-tabs-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(255, 215, 0, 0.3) 20%, 
+        rgba(255, 215, 0, 0.3) 80%, 
+        transparent 100%
+    );
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+.service-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.service-tab {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    backdrop-filter: blur(30px);
+    border: 2px solid rgba(255, 215, 0, 0.2);
+    border-radius: 50px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-tab::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+    transition: left 0.6s;
+}
+
+.service-tab:hover::before {
+    left: 100%;
+}
+
+.service-tab:hover {
+    border-color: rgba(255, 215, 0, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+}
+
+.service-tab.active {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    border-color: transparent;
+    color: #000;
+    box-shadow: 0 10px 40px rgba(255, 215, 0, 0.5);
+    transform: translateY(-3px);
+}
+
+.tab-icon {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.tab-label {
+    font-size: 1rem;
+}
+
+/* Services Grid */
+.services-grid-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    opacity: 0;
+    transform: translateY(30px);
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.services-grid.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    position: relative;
+}
+
+.hero-scroll-indicator {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    animation: scrollBounce 2s ease-in-out infinite;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-scroll-indicator:hover {
+    transform: scale(1.1);
+}
+
+.scroll-text {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.hero-scroll-indicator:hover .scroll-text {
+    color: #FFD700;
+    letter-spacing: 3px;
+}
+
+.scroll-arrow {
+    font-size: 1.5rem;
+    color: #FFD700;
+    position: relative;
+    animation: arrowFloat 2s ease-in-out infinite;
+}
+
+.scroll-arrow::before {
+    content: '↓';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    opacity: 0;
+    /* animation: arrowTrail 2s ease-in-out infinite; */
+}
+
+.scroll-arrow::after {
+    content: '↓';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    opacity: 0;
+   /* animation: arrowTrail 2s ease-in-out infinite 0.3s; */
+}
+
+@keyframes scrollBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(15px); }
+}
+
+@keyframes arrowFloat {
+    0%, 100% { 
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% { 
+        transform: translateY(10px);
+        opacity: 0.7;
+    }
+}
+
+@keyframes arrowTrail {
+    0% { 
+        opacity: 0;
+        transform: translateY(0);
+    }
+    50% { 
+        opacity: 0.4;
+        transform: translateY(10px);
+    }
+    100% { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+/* Fade out scroll indicator on scroll */
+.hero-scroll-indicator.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .hero-scroll-indicator {
+        margin-top: 2rem;
+        gap: 0.5rem;
+    }
+    
+    .scroll-text {
+        font-size: 0.75rem;
+        letter-spacing: 1.5px;
+    }
+    
+    .scroll-arrow {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-scroll-indicator {
+        margin-top: 1.5rem;
+    }
+    
+    .scroll-text {
+        font-size: 0.7rem;
+    }
+}
+
+/* Service Card */
+.service-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    backdrop-filter: blur(30px);
+    border: 2px solid rgba(255, 215, 0, 0.15);
+    border-radius: 24px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.4s;
+    pointer-events: none;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 215, 0, 0.4);
+    box-shadow: 0 20px 60px rgba(255, 215, 0, 0.3);
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+.service-card-image {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    position: relative;
+}
+
+.service-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover .service-card-image img {
+    transform: scale(1.1);
+}
+
+.service-card-content {
+    padding: 2rem;
+}
+
+.service-card-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.service-card-desc {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.service-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.service-card-tag {
+    padding: 0.4rem 0.9rem;
+    background: rgba(255, 215, 0, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #FFD700;
+    transition: all 0.3s;
+}
+
+.service-card:hover .service-card-tag {
+    background: rgba(255, 215, 0, 0.2);
+    border-color: rgba(255, 215, 0, 0.5);
+}
+
+.service-card-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.9rem 1.8rem;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #000;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.3);
+}
+
+.service-card-btn:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 30px rgba(255, 215, 0, 0.5);
+}
+
+.service-card-btn .btn-arrow {
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+}
+
+.service-card-btn:hover .btn-arrow {
+    transform: translate(3px, -3px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-section {
+        padding: 4rem 1rem 6rem;
+    }
+    
+    .service-tabs {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .service-tab {
+        width: 100%;
+        justify-content: center;
+        padding: 1rem 1.5rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .service-card-image {
+        height: 200px;
+    }
+    
+    .service-card-content {
+        padding: 1.5rem;
+    }
+    
+    .service-card-title {
+        font-size: 1.3rem;
+    }
+}
+
+/* ============================================
+   FOOTER ANIMATIONS (from main)
+   ============================================ */
+@keyframes gridMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(50px, -50px) scale(1.1); }
+}
+
+footer a:hover {
+    color: #FFD700 !important;
+    transform: translateX(5px);
+}
+
+footer .social-link:hover {
+    transform: translateY(-5px) scale(1.1);
+    border-color: #FFD700;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #000;
+    box-shadow: 0 10px 40px rgba(255, 215, 0, 0.6);
+}
+
+footer a[href^="tel"]:hover,
+footer a[href^="mailto"]:hover {
+    color: #FFD700 !important;
+    transform: translateX(5px);
+}
+
+@media (max-width: 1024px) {
+    footer > div > div:first-child {
+        grid-template-columns: 1fr !important;
+        gap: 3rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    footer > div {
+        padding: 5rem 1.5rem 2rem !important;
+    }
+    
+    footer > div > div:first-child {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ============================================
+   BOOKING SECTION - SINGLE SERVICE CARD
+   ============================================ */
+#booking.services-horizontal {
+    min-height: 100vh;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#booking .services-container {
+    position: relative;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+}
+
+#booking .service-slide {
+    position: relative;
+    min-height: auto;
+    height: auto;
+    z-index: 1;
+}
+
+/* Booking card gets gold gradient background */
+#booking .service-slide-content {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.95), rgba(255, 165, 0, 0.9));
+}
+
+#booking .service-slide-content::before {
+    background: linear-gradient(135deg, transparent 0%, rgba(255, 140, 0, 0.15) 100%);
+}
+
+#booking .service-slide-title,
+#booking .service-slide-desc {
+    color: #000;
+}
+
+#booking .service-tag {
+    background: #000;
+    color: #FFD700;
+    border-color: #000;
+}
+
+#booking .service-tag:hover {
+    background: rgba(0, 0, 0, 0.1);
+    color: #000;
+    border-color: #000;
+}
+
+#booking .service-slide-btn {
+    background: linear-gradient(135deg, #000, #0a0a0a);
+    color: #FFD700;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+#booking .service-slide-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+}
+
+#booking .btn-arrow {
+    background: rgba(255, 215, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    #booking .service-slide-content {
+        grid-template-columns: 1fr;
+        padding: 3rem;
+    }
+    
+    #booking .service-slide-right {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    #booking.services-horizontal {
+        min-height: auto;
+        padding: 2rem 0;
+    }
+    
+    #booking .services-container {
+        padding: 2rem 1rem;
+    }
+    
+    #booking .service-slide-content {
+        padding: 2rem;
+        border-radius: 20px;
+    }
+}
+
+</style>
+
+    <!-- Animated Background -->
+    <div class="bg-container">
+        <div class="grid-bg"></div>
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Navigation (Copied from main site) -->
+    <nav class="main-nav" id="navbar">
+        <div class="logo">
+            <img src="logo.svg" alt="ElitesDev Logo" style="height: 55px; width: auto;">
+        </div>
+
+        <div class="nav-pill">
+            <ul class="nav-menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li class="has-dropdown">
+                    <a href="services.html" class="active">Services</a>
+                    <ul class="dropdown">
+                        <li><a href="services.html">Branding & Marketing</a></li>
+                        <li><a href="services.html">Web Development</a></li>
+                        <li><a href="services.html">Strategy Consulting</a></li>
+                    </ul>
+                </li> 
+                <li class="has-dropdown">
+                    <a href="#">Pages</a>
+                    <ul class="dropdown">
+                        <li><a href="index.html#projects">Projects</a></li>
+                        <li><a href="index.html#testimonials">Testimonials</a></li>
+                        <li><a href="index.html#faq">FAQs</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#booking">Book Service</a></li>
+            </ul>
+
+            <div class="nav-buttons">
+                <button class="btn btn-talk" onclick="window.location.href='booking.html'">Let's Talk</button>
+                <button class="btn btn-get" onclick="window.location.href='services.html'">Get Started</button>
+            </div>
+        </div>
+    </nav>
+
+<!-- === SERVICES PAGE START === -->
+
+<!-- Services Hero Section  -->
+<section class="services-hero" id="hero">
+    <div class="services-hero-bg"></div>
+    <div class="services-hero-shape services-hero-shape-1"></div>
+    <div class="services-hero-shape services-hero-shape-2"></div>
+    
+    <div class="services-hero-content">
+        <div class="services-hero-badge">
+            <span style="font-size: 1.25rem;">✨</span>
+            <span style="font-weight: 600; color: rgba(255, 255, 255, 0.9);">Our Complete Service Suite</span>
+        </div>
+        
+        <h1 class="services-hero-title">
+            <span class="text-white">Transforming Ideas Into</span><br>
+            <span class="gradient-text">Digital Excellence</span>
+        </h1>
+        
+        <p class="services-hero-desc">
+            From strategic branding to cutting-edge development, we offer comprehensive digital solutions 
+            that drive growth, enhance user experience, and establish market dominance.
+        </p>
+        
+        <div class="hero-scroll-indicator">
+            <span class="scroll-text">Scroll to explore</span>
+            <div class="scroll-arrow">↓</div>
+        </div>
+    </div>
+</section>
+
+<!-- NEW SERVICES SECTION -->
+<section id="services-main" class="services-section">
+    <!-- Service Category Tabs -->
+    <div class="service-tabs-container">
+        <div class="service-tabs-line"></div>
+        <div class="service-tabs">
+            <button class="service-tab active" data-category="branding">
+                <span class="tab-icon">🎨</span>
+                <span class="tab-label">Branding & Marketing</span>
+            </button>
+            <button class="service-tab" data-category="webdev">
+                <span class="tab-icon">💻</span>
+                <span class="tab-label">Web Development</span>
+            </button>
+            <button class="service-tab" data-category="strategy">
+                <span class="tab-icon">🎯</span>
+                <span class="tab-label">Strategy Consulting</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Services Grid Container -->
+    <div class="services-grid-wrapper">
+        <!-- Branding Services -->
+        <div class="services-grid active" id="branding-grid">
+            <div class="service-card">
+                <div class="service-card-image">
+                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80" alt="Social Media Marketing">
+                </div>
+                <div class="service-card-content">
+                    <h3 class="service-card-title">Social Media Marketing</h3>
+                    <p class="service-card-desc">Transform your social presence with data-driven strategies that engage audiences and drive results.</p>
+                    <div class="service-card-tags">
+                        <span class="service-card-tag">Instagram</span>
+                        <span class="service-card-tag">Facebook</span>
+                        <span class="service-card-tag">LinkedIn</span>
+                        <span class="service-card-tag">TikTok</span>
+                    </div>
+                    <a href="index.html#booking" class="service-card-btn">
+                        <span>Get Started</span>
+                        <span class="btn-arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-image">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="SEO Services">
+                </div>
+                <div class="service-card-content">
+                    <h3 class="service-card-title">Search Engine Optimization</h3>
+                    <p class="service-card-desc">Dominate search rankings with comprehensive SEO strategies ensuring maximum visibility.</p>
+                    <div class="service-card-tags">
+                        <span class="service-card-tag">Technical SEO</span>
+                        <span class="service-card-tag">Content SEO</span>
+                        <span class="service-card-tag">Local SEO</span>
+                        <span class="service-card-tag">Analytics</span>
+                    </div>
+                    <a href="index.html#booking" class="service-card-btn">
+                        <span>Get Started</span>
+                        <span class="btn-arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-image">
+                    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80" alt="Content Strategy">
+                </div>
+                <div class="service-card-content">
+                    <h3 class="service-card-title">Content Strategy & Copywriting</h3>
+                    <p class="service-card-desc">Craft compelling narratives that resonate, build authority, and convert readers into customers.</p>
+                    <div class="service-card-tags">
+                        <span class="service-card-tag">Blog Posts</span>
+                        <span class="service-card-tag">Web Copy</span>
+                        <span class="service-card-tag">Email Campaigns</span>
+                        <span class="service-card-tag">Scripts</span>
+                    </div>
+                    <a href="index.html#booking" class="service-card-btn">
+                        <span>Get Started</span>
+                        <span class="btn-arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-image">
+                    <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&w=800&q=80" alt="Paid Advertising">
+                </div>
+                <div class="service-card-content">
+                    <h3 class="service-card-title">Paid Ads & Campaigns</h3>
+                    <p class="service-card-desc">Maximize ROI with precision-targeted advertising campaigns that convert and drive growth.</p>
+                    <div class="service-card-tags">
+                        <span class="service-card-tag">Google Ads</span>
+                        <span class="service-card-tag">Meta Ads</span>
+                        <span class="service-card-tag">Display</span>
+                        <span class="service-card-tag">Retargeting</span>
+                    </div>
+                    <a href="index.html#booking" class="service-card-btn">
+                        <span>Get Started</span>
+                        <span class="btn-arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-image">
+                    <img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=800&q=80" alt="Content Production">
+                </div>
+                <div class="service-card-content">
+                    <h3 class="service-card-title">Video & Photo Production</h3>
+                    <p class="service-card-desc">Create stunning visual content that captivates and converts across all platforms.</p>
+                    <div class="service-card-tags">
+                        <span class="service-card-tag">Reels</span>
+                        <span class="service-card-tag">Photography</span>
+                        <span class="service-card-tag">Video Editing</span>
+                        <span class="service-card-tag">Motion Graphics</span>
+                    </div>
+                    <a href="index.html#booking" class="service-card-btn">
+                        <span>Get Started</span>
+                        <span class="btn-arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-image">
+                    <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80" alt="Brand Identity">
+                </div>
+                <div class="service-card-content">
+                    <h3 class="service-card-title">Brand Identity & Guidelines</h3>
+                    <p class="service-card-desc">Establish powerful brand presence with cohesive visual identities and comprehensive guidelines.</p>
+                    <div class="service-card-tags">
+                        <span class="service-card-tag">Logo Design</span>
+                        <span class="service-card-tag">Color Palette</span>
+                        <span class="service-card-tag">Typography</span>
+                        <span class="service-card-tag">Brand Book</span>
+                    </div>
+                    <a href="index.html#booking" class="service-card-btn">
+                        <span>Get Started</span>
+                        <span class="btn-arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Web Development Services -->
+        <div class="services-grid" id="webdev-grid">
+            <div class="service-card">
+                <div class="service-card-image">
+                    <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=800&q=80" alt="WordPress Development">
+                </div>
+                <div class="service-card-content">
+                    <h3 class="service-card-title">WordPress Development</h3>
+                    <p class="service-card-desc">Create powerful WordPress sites with custom themes and advanced functionality.</p>
+                    <div class="service-card-tags">
+                        <span class="service-card-tag">Custom Themes</span>
+                        <span class="service-card-tag">Plugins</span>
+                        <span class="service-card-tag">WooCommerce</span>
+                        <span class="service-card-tag">Gutenberg</span>
+                    </div>
+                    <a href="index.html#booking" class="service-card-btn">
+                        <span>Get Started</span>
+                        <span class="btn-arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-image">
+                    <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=800&q=80" alt="Shopify Development">
+                </div>
+                <div class="service-card-content">
+                    <h3 class="service-card-title">Shopify E-Commerce</h3>
+                    <p class="service-card-desc">Launch and scale successful online stores with stunning designs and optimized conversions.</p>
+                    <div class="service-card-tags">
+                        <span class="service-card-tag">Store Setup</span>
+                        <span class="service-card-tag">Custom Themes</span>
+                        <span class="service-card-tag">Apps Integration</span>
+                        <span class="service-card-tag">Optimization</span>
+                    </div>
+                    <a href="index.html#booking" class="service-card-btn">
+                        <span>Get Started</span>
+                        <span class="btn-arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-image">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80" alt="Custom Development">
+                </div>
+                <div class="service-card-content">
+                    <h3 class="service-card-title">Custom Web Development</h3>
+                    <p class="service-card-desc">Build bespoke web applications tailored to your unique requirements with modern tech.</p>
+                    <div class="service-card-tags">
+                        <span class="service-card-tag">React</span>
+                        <span class="service-card-tag">Node.js</span>
+                        <span class="service-card-tag">APIs</span>
+                        <span class="service-card-tag">Progressive Web Apps</span>
+                    </div>
+                    <a href="index.html#booking" class="service-card-btn">
+                        <span>Get Started</span>
+                        <span class="btn-arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-image">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Performance Optimization">
+                </div>
+                <div class="service-card-content">
+                    <h3 class="service-card-title">Performance & Core Web Vitals</h3>
+                    <p class="service-card-desc">Supercharge website performance with expert optimization and lightning-fast experiences.</p>
+                    <div class="service-card-tags">
+                        <span class="service-card-tag">Speed Optimization</span>
+                        <span class="service-card-tag">SEO Performance</span>
+                        <span class="service-card-tag">Mobile First</span>
+                        <span class="service-card-tag">Lighthouse</span>
+                    </div>
+                    <a href="index.html#booking" class="service-card-btn">
+                        <span>Get Started</span>
+                        <span class="btn-arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-image">
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" alt="Website Maintenance">
+                </div>
+                <div class="service-card-content">
+                    <h3 class="service-card-title">Website Maintenance & Support</h3>
+                    <p class="service-card-desc">Keep your website secure, updated, and performing at its best with proactive monitoring.</p>
+                    <div class="service-card-tags">
+                        <span class="service-card-tag">Security Updates</span>
+                        <span class="service-card-tag">Backups</span>
+                        <span class="service-card-tag">Monitoring</span>
+                        <span class="service-card-tag">Bug Fixes</span>
+                    </div>
+                    <a href="index.html#booking" class="service-card-btn">
+                        <span>Get Started</span>
+                        <span class="btn-arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-image">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Hosting & Deployment">
+                </div>
+                <div class="service-card-content">
+                    <h3 class="service-card-title">Hosting & Deployment</h3>
+                    <p class="service-card-desc">End-to-end deployment with secure hosting, automated pipelines, and proactive monitoring.</p>
+                    <div class="service-card-tags">
+                        <span class="service-card-tag">SSL</span>
+                        <span class="service-card-tag">CDN</span>
+                        <span class="service-card-tag">CI/CD</span>
+                        <span class="service-card-tag">Monitoring</span>
+                    </div>
+                    <a href="index.html#booking" class="service-card-btn">
+                        <span>Get Started</span>
+                        <span class="btn-arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Strategy Consulting Services -->
+        <div class="services-grid" id="strategy-grid">
+            <div class="service-card">
+                <div class="service-card-image">
+                    <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=800&q=80" alt="Go-to-Market">
+                </div>
+                <div class="service-card-content">
+                    <h3 class="service-card-title">Go-to-Market & Positioning</h3>
+                    <p class="service-card-desc">Launch with clarity by defining audience, narrative, and channels for maximum impact.</p>
+                    <div class="service-card-tags">
+                        <span class="service-card-tag">ICP</span>
+                        <span class="service-card-tag">Messaging</span>
+                        <span class="service-card-tag">Channels</span>
+                        <span class="service-card-tag">Pricing</span>
+                    </div>
+                    <a href="index.html#booking" class="service-card-btn">
+                        <span>Know More</span>
+                        <span class="btn-arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-image">
+                    <img src="https://images.unsplash.com/photo-1551288049-9329b6d8d5a0?auto=format&fit=crop&w=800&q=80" alt="Analytics">
+                </div>
+                <div class="service-card-content">
+                    <h3 class="service-card-title">Analytics & Measurement</h3>
+                    <p class="service-card-desc">Instrument, track, and learn with clear dashboards and KPIs that drive decisions.</p>
+                    <div class="service-card-tags">
+                        <span class="service-card-tag">Attribution</span>
+                        <span class="service-card-tag">Dashboards</span>
+                        <span class="service-card-tag">Cohorts</span>
+                        <span class="service-card-tag">Reporting</span>
+                    </div>
+                    <a href="index.html#booking" class="service-card-btn">
+                        <span>Know More</span>
+                        <span class="btn-arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-image">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="Growth & CRO">
+                </div>
+                <div class="service-card-content">
+                    <h3 class="service-card-title">Growth Experiments & CRO</h3>
+                    <p class="service-card-desc">Systematic experimentation to increase activation, conversion, and retention rates.</p>
+                    <div class="service-card-tags">
+                        <span class="service-card-tag">A/B Tests</span>
+                        <span class="service-card-tag">Funnels</span>
+                        <span class="service-card-tag">Retention</span>
+                        <span class="service-card-tag">Playbooks</span>
+                    </div>
+                    <a href="index.html#booking" class="service-card-btn">
+                        <span>Know More</span>
+                        <span class="btn-arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-image">
+                    <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=800&q=80" alt="Process Optimization">
+                </div>
+                <div class="service-card-content">
+                    <h3 class="service-card-title">Process Optimization</h3>
+                    <p class="service-card-desc">Tighten operations and scale with confidence through workflow mapping and automation.</p>
+                    <div class="service-card-tags">
+                        <span class="service-card-tag">Automation</span>
+                        <span class="service-card-tag">SOPs</span>
+                        <span class="service-card-tag">Throughput</span>
+                        <span class="service-card-tag">Quality</span>
+                    </div>
+                    <a href="index.html#booking" class="service-card-btn">
+                        <span>Know More</span>
+                        <span class="btn-arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BOOK A SERVICE SECTION - SINGLE CARD -->
+<section id="booking" class="services-horizontal">
+    <div class="services-container">
+        <div class="service-slide">
+            <div class="service-slide-content">
+                <div class="service-slide-left">
+                    <h2 class="service-slide-title">Ready to Get Started?</h2>
+                    <div class="service-slide-tags">
+                        <span class="service-tag">Free Consultation</span>
+                        <span class="service-tag">Custom Proposal</span>
+                        <span class="service-tag">No Obligation</span>
+                        <span class="service-tag">Quick Response</span>
+                    </div>
+                    <p class="service-slide-desc">Let's discuss your project and create something extraordinary together. Book a consultation with our team and start your digital transformation journey today.</p>
+                    <a href="booking.html" class="service-slide-btn">
+                        <span>Book a Service</span>
+                        <span class="btn-arrow">↗</span>
+                    </a>
+                </div>
+                <div class="service-slide-right">
+                    <div class="service-visual">
+                        <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80" alt="Book a Service">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- REVOLUTIONARY FOOTER -->
+<footer style="position: relative; overflow: hidden; background: #000; border-top: none; padding: 8rem 2rem 2rem;">
+    <!-- Animated Background -->
+    <div style="position: absolute; inset: 0; pointer-events: none; z-index: 0;">
+        <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255, 215, 0, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 215, 0, 0.02) 1px, transparent 1px); background-size: 50px 50px; animation: gridMove 30s linear infinite;"></div>
+        <div style="position: absolute; width: 500px; height: 500px; background: linear-gradient(135deg, #FFD700, #FFA500); border-radius: 50%; filter: blur(120px); opacity: 0.15; top: -20%; left: -10%; animation: float 25s ease-in-out infinite;"></div>
+        <div style="position: absolute; width: 400px; height: 400px; background: linear-gradient(135deg, #00D4FF, #0099FF); border-radius: 50%; filter: blur(120px); opacity: 0.15; bottom: -20%; right: -10%; animation: float 25s ease-in-out infinite; animation-delay: 10s;"></div>
+    </div>
+
+    <div style="max-width: 1400px; margin: 0 auto; position: relative; z-index: 1;">
+        <!-- Links Grid -->
+        <div style="display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 5rem;">
+            <!-- Company Info -->
+            <div>
+                <div style="font-size: 2.5rem; font-weight: 900; margin-bottom: 1.5rem; display: flex; gap: 2px;">
+                    <img src="logo.svg" alt="ElitesDev Logo" style="height: 65px; width: auto;">
+                </div>
+                <p style="color: rgba(255, 255, 255, 0.7); line-height: 1.7; margin-bottom: 2rem; font-size: 0.95rem;">Creating digital experiences that drive growth and deliver measurable results. Your success is our passion.</p>
+                
+                <!-- Social Links with Glow Effect -->
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="#" style="width: 48px; height: 48px; background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 165, 0, 0.05)); backdrop-filter: blur(20px); border: 2px solid rgba(255, 215, 0, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #FFD700; text-decoration: none; font-size: 1.2rem; transition: all 0.3s; box-shadow: 0 5px 20px rgba(255, 215, 0, 0.2);">𝕏</a>
+                    <a href="#" style="width: 48px; height: 48px; background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 165, 0, 0.05)); backdrop-filter: blur(20px); border: 2px solid rgba(255, 215, 0, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #FFD700; text-decoration: none; font-size: 1.2rem; transition: all 0.3s; box-shadow: 0 5px 20px rgba(255, 215, 0, 0.2);">in</a>
+                    <a href="#" style="width: 48px; height: 48px; background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 165, 0, 0.05)); backdrop-filter: blur(20px); border: 2px solid rgba(255, 215, 0, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #FFD700; text-decoration: none; font-size: 1.2rem; transition: all 0.3s; box-shadow: 0 5px 20px rgba(255, 215, 0, 0.2);">📷</a>
+                    <a href="#" style="width: 48px; height: 48px; background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 165, 0, 0.05)); backdrop-filter: blur(20px); border: 2px solid rgba(255, 215, 0, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #FFD700; text-decoration: none; font-size: 1.2rem; transition: all 0.3s; box-shadow: 0 5px 20px rgba(255, 215, 0, 0.2);">▶</a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem; color: #fff; position: relative; padding-bottom: 0.75rem;">
+                    Quick Links
+                    <span style="position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background: linear-gradient(90deg, #FFD700, #FFA500); border-radius: 2px;"></span>
+                </h4>
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <a href="index.html#home" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> Home
+                    </a>
+                    <a href="index.html#about" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> About Us
+                    </a>
+                    <a href="services.html" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> Services
+                    </a>
+                    <a href="index.html#projects" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> Portfolio
+                    </a>
+                </div>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem; color: #fff; position: relative; padding-bottom: 0.75rem;">
+                    Services
+                    <span style="position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background: linear-gradient(90deg, #FFD700, #FFA500); border-radius: 2px;"></span>
+                </h4>
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <a href="#branding" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> Branding
+                    </a>
+                    <a href="#webdev" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> Web Development
+                    </a>
+                    <a href="#strategy" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> Strategy
+                    </a>
+                    <a href="index.html#booking" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> Contact
+                    </a>
+                </div>
+            </div>
+
+            <!-- Company -->
+            <div>
+                <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem; color: #fff; position: relative; padding-bottom: 0.75rem;">
+                    Company
+                    <span style="position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background: linear-gradient(90deg, #FFD700, #FFA500); border-radius: 2px;"></span>
+                </h4>
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <a href="index.html#about" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> Our Story
+                    </a>
+                    <a href="index.html#testimonials" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> Testimonials
+                    </a>
+                    <a href="index.html#faq" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700;">→</span> FAQs
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem; color: #fff; position: relative; padding-bottom: 0.75rem;">
+                    Contact
+                    <span style="position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background: linear-gradient(90deg, #FFD700, #FFA500); border-radius: 2px;"></span>
+                </h4>
+                <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                    <a href="tel:+917757907676" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700; font-size: 1.2rem;">📞</span>
+                        <span>+91 77579 07676</span>
+                    </a>
+                    <a href="mailto:contact@elitesdev.com" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700; font-size: 1.2rem;">✉️</span>
+                        <span>contact@elitesdev.com</span>
+                    </a>
+                    <a href="#location" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.95rem;">
+                        <span style="color: #FFD700; font-size: 1.2rem;">📍</span>
+                        <span>Chennai, Tamil Nadu, India</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div style="padding-top: 3rem; border-top: 1px solid rgba(255, 215, 0, 0.2); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
+            <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.95rem; margin: 0;">
+                &copy; 2025 ElitesDev. All Rights Reserved. 
+                <span style="color: #FFD700; font-weight: 600;">Crafted with ❤️</span>
+            </p>
+            <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                <a href="#privacy" style="color: rgba(255, 255, 255, 0.6); text-decoration: none; font-size: 0.95rem; transition: color 0.3s;">Privacy Policy</a>
+                <a href="#terms" style="color: rgba(255, 255, 255, 0.6); text-decoration: none; font-size: 0.95rem; transition: color 0.3s;">Terms of Service</a>
+                <a href="#cookies" style="color: rgba(255, 255, 255, 0.6); text-decoration: none; font-size: 0.95rem; transition: color 0.3s;">Cookie Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/@studio-freight/lenis@1/dist/lenis.min.js"></script>
+<script>
+/* ========================================
+   LENIS SMOOTH SCROLL INITIALIZATION
+   ======================================== */
+const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    direction: 'vertical',
+    smooth: true,
+    mouseMultiplier: 1,
+    touchMultiplier: 2,
+});
+
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
+/* ========================================
+   CUSTOM CURSOR (EXACT FROM MAIN PAGE)
+   ======================================== */
+(function() {
+    'use strict';
+    
+    // Don't initialize on touch devices
+    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+        return;
+    }
+    
+    // Create main cursor
+    const cursor = document.createElement('div');
+    cursor.className = 'custom-cursor';
+    document.body.appendChild(cursor);
+    
+    // Create trail particles
+    const trailCount = 6;
+    const trails = [];
+    
+    for (let i = 0; i < trailCount; i++) {
+        const trail = document.createElement('div');
+        trail.className = 'custom-cursor-trail';
+        trail.style.opacity = (1 - (i / trailCount)) * 0.6;
+        document.body.appendChild(trail);
+        trails.push({
+            element: trail,
+            x: 0,
+            y: 0
+        });
+    }
+    
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+    let cursorX = mouseX;
+    let cursorY = mouseY;
+    
+    // Update mouse position
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+    
+    // Smooth animation
+    function animateCursor() {
+        const dx = mouseX - cursorX;
+        const dy = mouseY - cursorY;
+        
+        cursorX += dx * 0.2;
+        cursorY += dy * 0.2;
+        
+        cursor.style.left = cursorX + 'px';
+        cursor.style.top = cursorY + 'px';
+        
+        // Animate trails with progressive delay
+        trails.forEach((trail, index) => {
+            const delay = (index + 1) * 0.05;
+            trail.x += (cursorX - trail.x) * (0.15 - delay);
+            trail.y += (cursorY - trail.y) * (0.15 - delay);
+            
+            trail.element.style.left = trail.x + 'px';
+            trail.element.style.top = trail.y + 'px';
+        });
+        
+        requestAnimationFrame(animateCursor);
+    }
+    
+    animateCursor();
+    
+    // Hover effects for clickable elements
+    const clickableElements = 'a, button, .btn, .service-card, .testimonial-card, .faq-card, .project-slide, .nav-menu a, .social-link, [role="button"], [onclick], .menu-btn, .cta-btn, .service-slide-btn, .category-btn';
+    
+    document.addEventListener('mouseover', (e) => {
+        if (e.target.closest(clickableElements)) {
+            cursor.classList.add('hover');
+            trails.forEach(trail => trail.element.style.opacity = '0');
+        }
+    });
+    
+    document.addEventListener('mouseout', (e) => {
+        if (e.target.closest(clickableElements)) {
+            cursor.classList.remove('hover');
+            trails.forEach((trail, index) => {
+                trail.element.style.opacity = (1 - (index / trailCount)) * 0.6;
+            });
+        }
+    });
+    
+    // Text input hover
+    const textInputs = 'input[type="text"], input[type="email"], input[type="tel"], textarea';
+    
+    document.addEventListener('mouseover', (e) => {
+        if (e.target.matches(textInputs)) {
+            cursor.classList.add('text-hover');
+            trails.forEach(trail => trail.element.style.opacity = '0');
+        }
+    });
+    
+    document.addEventListener('mouseout', (e) => {
+        if (e.target.matches(textInputs)) {
+            cursor.classList.remove('text-hover');
+            trails.forEach((trail, index) => {
+                trail.element.style.opacity = (1 - (index / trailCount)) * 0.6;
+            });
+        }
+    });
+    
+    // Click effect
+    document.addEventListener('mousedown', () => {
+        cursor.classList.add('click');
+    });
+    
+    document.addEventListener('mouseup', () => {
+        cursor.classList.remove('click');
+    });
+    
+    // Hide when leaving window
+    document.addEventListener('mouseleave', () => {
+        cursor.style.opacity = '0';
+        trails.forEach(trail => trail.element.style.opacity = '0');
+    });
+    
+    document.addEventListener('mouseenter', () => {
+        cursor.style.opacity = '1';
+        trails.forEach((trail, index) => {
+            trail.element.style.opacity = (1 - (index / trailCount)) * 0.6;
+        });
+    });
+    
+    console.log('%c✨ Custom Cursor Active!', 'background: linear-gradient(135deg, #FFD700, #FFA500); color: black; font-size: 14px; padding: 6px; font-weight: bold;');
+})();
+
+/* ========================================
+   NAVIGATION HIDE ON SCROLL
+   ======================================== */
+const nav = document.querySelector('.main-nav');
+const categoryNav = document.getElementById('categoryNav');
+let lastScrollY = 0;
+
+window.addEventListener('scroll', () => {
+    const currentScrollY = window.pageYOffset;
+    
+    if (currentScrollY > lastScrollY && currentScrollY > 200) {
+        if (nav) nav.style.transform = 'translate(-50%, -150%)';
+    } else {
+        if (nav) nav.style.transform = 'translate(-50%, 0)';
+    }
+    
+    lastScrollY = currentScrollY;
+}, { passive: true });
+
+/* ========================================
+   SCROLL INDICATOR INTERACTIONS
+   ======================================== */
+(function() {
+    const scrollIndicator = document.querySelector('.hero-scroll-indicator');
+    const servicesSection = document.getElementById('services-main');
+    
+    if (!scrollIndicator || !servicesSection) return;
+    
+    // Smooth scroll to services on click
+    scrollIndicator.addEventListener('click', () => {
+        if (typeof lenis !== 'undefined') {
+            lenis.scrollTo(servicesSection, {
+                offset: -100,
+                duration: 1.5,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+            });
+        } else {
+            servicesSection.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'start' 
+            });
+        }
+    });
+    
+    // Fade out indicator on scroll
+    let scrollTimeout;
+    const handleScroll = () => {
+        const scrollY = window.pageYOffset;
+        
+        if (scrollY > 100) {
+            scrollIndicator.classList.add('hidden');
+        } else {
+            scrollIndicator.classList.remove('hidden');
+        }
+    };
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    // Add pulse effect when page loads
+    setTimeout(() => {
+        scrollIndicator.style.animation = 'scrollBounce 2s ease-in-out infinite, pulse 3s ease-in-out infinite';
+    }, 1000);
+    
+    console.log('%c↓ Scroll Indicator Active!', 'background: #FFD700; color: black; padding: 6px; font-weight: bold;');
+})();
+
+
+
+/* ========================================
+   NEW SERVICE TABS FUNCTIONALITY
+   ======================================== */
+(function() {
+    const tabs = document.querySelectorAll('.service-tab');
+    const grids = document.querySelectorAll('.services-grid');
+    
+    if (tabs.length === 0 || grids.length === 0) return;
+    
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const category = tab.getAttribute('data-category');
+            
+            // Update active tab
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            
+            // Update active grid
+            grids.forEach(grid => grid.classList.remove('active'));
+            const targetGrid = document.getElementById(`${category}-grid`);
+            if (targetGrid) {
+                targetGrid.classList.add('active');
+            }
+            
+            // Smooth scroll to grid if mobile
+            if (window.innerWidth <= 768) {
+                setTimeout(() => {
+                    targetGrid.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 100);
+            }
+        });
+    });
+    
+    console.log('%c🎯 Service Tabs Active!', 'background: #10B981; color: white; padding: 6px; font-weight: bold;');
+})();
+
+
+
+</script>
+</body>
+</html>
